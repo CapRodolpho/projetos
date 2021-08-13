@@ -125,11 +125,11 @@ window.onscroll = async () => {
 map.on('load', () => {
     map.flyTo( initZoom )
     window.scrollTo(0, 0)
-    map.on('mouseup', () => {
+    /* map.on('mouseup', () => {
         const { lng, lat } = map.getCenter();
         console.log([lng, lat])
         console.log(map.getZoom())
-    });
+    }); */
 })
 
 
