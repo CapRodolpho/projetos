@@ -7,335 +7,191 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://cdn.maptiler.com/maplibre-gl-js/v1.13.0-rc.4/mapbox-gl.css" rel="stylesheet" />
     <script src="https://cdn.maptiler.com/maplibre-gl-js/v1.13.0-rc.4/mapbox-gl.js"></script>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #map {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script src="./js/configs.js"></script>
 </head>
 
 <body>
     <style>
-        #map {
-            position: fixed;
-            width: 70%;
-        }
-
-        #features {
-            width: 30%;
-            margin-left: 70%;
-            font-family: sans-serif;
-            overflow-y: scroll;
-            background-color: #fafafa;
-        }
-
-        section {
-            padding: 55px 50px;
-            line-height: 25px;
-            border-bottom: 1px solid #ddd;
-            opacity: 0.25;
-            font-size: 13px;
-        }
-
-        .map-overlay {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            background: rgba(255, 255, 255, 0.8);
-            margin-left: 20px;
-            font-family: Arial, sans-serif;
-            overflow: auto;
-            border-radius: 3px;
-        }
-
-        #legend {
-            padding: 10px;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-            line-height: 18px;
-            height: 150px;
-            margin-bottom: 40px;
-            width: 100px;
-        }
-
-        .legend-key {
-            display: inline-block;
-            border-radius: 20%;
-            width: 10px;
-            height: 10px;
-            margin-left: 5px;
-        }
-
-        .legend-value {
-            display: inline-block;
-            margin-left: 5px;
-        }
-
-        .spacer {
-            padding: 55px 50px 450px;
-        }
-
-        section.active {
-            opacity: 1;
-        }
-
-        section:last-child {
-            border-bottom: none;
-            margin-bottom: 230px;
-        }
+        
     </style>
 
     <div id="map"></div>
     <div class='map-overlay' id='legend'></div>
     <div id="features">
-        <section id="baker" class="active">
-            <h3>221b Baker St.</h3>
-            <p>
-                November 1895. London is shrouded in fog and Sherlock Holmes and
-                Watson pass time restlessly awaiting a new case. "The London
-                criminal is certainly a dull fellow," Sherlock bemoans. "There have
-                been numerous petty thefts," Watson offers in response. Just then a
-                telegram arrives from Sherlock's brother Mycroft with a mysterious
-                case.
+        <section class="section-end">
+            <div style="text-align: center;">
+                <img class="logo" src="./images/1cgeo.png" alt="Divisão de Geoinformação">
+            </div>
+            <h2 class="title">Projetos</h2>
+            <div class='arrow-animation'>
+                <img class="arrow-down" src="./images/arrow-down.png">
+            </div>
+            <div class="spacer"></div>
+        </section>
+        <section id="generalizacao-cartografica-50k">
+            <h2 class="title">Generalização Cartográfica 2021</h2>
+            <p class="description">
+                O objetivo do presente projeto consiste em realizar a Generalização Cartográfica
+                na escala 1:50.000 e 1:100.000 de produtos na região de Paraná, Santa Catarina e Rio
+                Grande do Sul, para gerar 46 cartas topográficas na escala 1:50.000 e 15 cartas
+                topográficas na escala 1:100.000 visando atender a meta 11 do Plano Interno de Trabalho
+                (PIT) 2021 da Diretoria de Serviço Geográfico.
+            </p>
+            <br>
+            <p class="description">- Generalização 1:50.000</p>
+        </section>
+        <div class="spacer"></div>
+        <section id="generalizacao-cartografica-100k" class="section-end">
+            <p class="description">
+                - Generalização 1:100.000
+            </p>
+            <div class="spacer"></div>
+        </section>
+        <div class="spacer"></div>
+        <section id="plano-desenvolvimento" class="section-end">
+            <h2 class="title">Plano de Desenvolvimento da Doutrina Militar Terrestre 2021</h2>
+            <p class="description">
+                O objetivo do presente projeto consiste na elaboração de 52 cartas topográficas na escala entre
+                1:100.000 visando atender o exercício de adestramento em Jogo de Guerra do C Av Ex para a região do CMS.
             </p>
         </section>
-        <section id="aldgate">
-            <h3>Aldgate Station</h3>
-            <p>
-                Arthur Cadogan West was found dead, head crushed in on train tracks
-                at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich
-                Arsenal on the Bruce-Partington submarine, a secret military
-                project. Plans for the submarine had been stolen and seven of the
-                ten missing papers were found in West's possession. Mycroft implores
-                Sherlock to take the case and recover the three missing papers.
+        <div class="spacer"></div>
+        <section id="mapeamento-interesse-da-forca-25k">
+            <h2 class="title">Mapeamento de Áreas de Interesse da Força Terrestre 2021</h2>
+            <p class="description">
+                O objetivo do presente projeto consiste na elaboração de cartas ortoimagens em escalas entre 1:25.000 e
+                1:250.000 de áreas de interesse da Força Terrestre pelo território nacional. A Área de Suprimento
+                Cartográfico (ASC) do 1º Centro de Geoinformação (1º CGEO) corresponde à área de responsabilidade do
+                Comando Militar do Sul (CMS), abrangendo os estados do Rio Grande do Sul, Santa Catarina e Paraná. Dessa
+                forma, o 1º CGEO será responsável por executar esse projeto em sua respectiva área de responsabilidade.
+                <br>
+                - Escala 1:25.000
             </p>
         </section>
-        <section id="london-bridge">
-            <h3>London Bridge</h3>
-            <p>
-                Holmes and Watson's investigations take them across London. Sherlock
-                deduces that West was murdered elsewhere, then moved to Aldgate
-                Station to create the illusion that he was crushed on the tracks by
-                a train. On their way to Woolwich Sherlock dispatches a telegram to
-                Mycroft at London Bridge: "Send list of all foreign spies known to
-                be in England, with full address."
+        <div class="spacer"></div>
+        <section id="mapeamento-interesse-da-forca-50k">
+            <p class="description">
+                - Escala 1:50.000
             </p>
         </section>
-        <section id="woolwich">
-            <h3>Woolwich Arsenal</h3>
-            <p>
-                While investigating at Woolwich Arsenal Sherlock learns that West
-                did not have the three keys&mdash;door, office, and
-                safe&mdash;necessary to steal the papers. The train station clerk
-                mentions seeing an agitated West boarding the 8:15 train to London
-                Bridge. Sherlock suspects West of following someone who had access
-                to the Woolwich chief's keyring with all three keys.
+        <div class="spacer"></div>
+        <section id="mapeamento-interesse-da-forca-100k">
+            <p class="description">
+                - Escala 1:100.000
             </p>
         </section>
-        <section id="gloucester">
-            <h3>Gloucester Road</h3>
-            <p>
-                Mycroft responds to Sherlock's telegram and mentions several spies.
-                Hugo Oberstein of 13 Caulfield Gardens catches Sherlock's eye. He
-                heads to the nearby Gloucester Road station to investigate and
-                learns that the windows of Caulfield Gardens open over rail tracks
-                where trains stop frequently.
+        <div class="spacer"></div>
+        <section id="mapeamento-interesse-da-forca-250k" class="section-end">
+            <p class="description">
+                - Escala 1:250.000
+            </p>
+            <div class="spacer"></div>
+        </section>
+        <section id="sisfron-ms" class="section-end">
+            <div class="spacer"></div>
+            <h2 class="title">SISFRON</h2>
+            <p class="description">
+                O projeto SISFRON – Sistema Integrado de Monitoramento de Fronteiras – tem como objetivo assegurar o
+                monitoramento da fronteira terrestre brasileira por meio de coleta, sistematização, processamento e
+                distribuição de informações, fortalecendo a presença e capacidade de ação do Estado na região. Pode-se
+                dizer que as cartas têm fundamental importância quando se trata de informações capazes de auxiliar na
+                tomada de decisão nas atividades fins do projeto. Nesse sentido, visando o atendimento das demandas do
+                Exército Brasileiro, o 1º Centro de Geoinformação (1º CGEO) ficou responsável pela elaboração de 64
+                cartas 1:25.000 do Mato Grosso do Sul e 13 cartas 1:50.000 de Roraima.
+                <br>
+                - Mato Grosso do Sul
             </p>
         </section>
-        <section id="caulfield-gardens">
-            <h3>13 Caulfield Gardens</h3>
-            <p>
-                Holmes deduces that the murderer placed West atop a stopped train at
-                Caulfield Gardens. The train traveled to Aldgate Station before
-                West's body finally toppled off. Backtracking to the criminal's
-                apartment, Holmes finds a series of classified ads from
-                <em>The Daily Telegraph</em> stashed away. All are under the name
-                Pierrot: "Monday night after nine. Two taps. Only ourselves. Do not
-                be so suspicious. Payment in hard cash when goods delivered."
+        <section id="sisfron-rr">
+            <div class="spacer"></div>
+            <p class="description">
+                - Roraima
             </p>
         </section>
-        <section id="telegraph">
-            <h3>The Daily Telegraph</h3>
-            <p>
-                Holmes and Watson head to The Daily Telegraph and place an ad to
-                draw out the criminal. It reads: "To-night. Same hour. Same place.
-                Two taps. Most vitally important. Your own safety at stake.
-                Pierrot." The trap works and Holmes catches the criminal: Colonel
-                Valentine Walter, the brother of Woolwich Arsenal's chief. He
-                confesses to working for Hugo Oberstein to obtain the submarine
-                plans in order to pay off his debts.
-            </p>
-        </section>
-        <section id="charing-cross">
-            <h3>Charing Cross Hotel</h3>
-            <p>
-                Walter writes to Oberstein and convinces him to meet in the smoking
-                room of the Charing Cross Hotel where he promises additional plans
-                for the submarine in exchange for money. The plan works and Holmes
-                and Watson catch both criminals.
-            </p>
-            <small id="citation">
-                Adapted from
-                <a href="http://www.gutenberg.org/files/2346/2346-h/2346-h.htm">Project Gutenberg</a>
-            </small>
-        </section>
+        <div class="spacer"></div>
+        <section id="rio-grande-do-sul" class="section-end">
+            <h2 class="title">Projeto de Mapeamento do Estado do Rio Grande do Sul</h2>
+            <p class="description">
+                O objetivo principal do projeto é a elaboração de 174 (cento e setenta e quatro) cartas topográficas na
+                escala 1:25.000, e seus respectivos insumos geoespaciais (ortoimagens, modelos digitais de elevação e
+                dados geoespaciais vetoriais), correspondentes à RF 1, compreendendo Porto Alegre, Região Metropolitana
+                e municípios adjacentes, identificadas segundo a nomenclatura utilizada no Mapa-Índice (MI), de acordo
+                com as Normas e Especificações Técnicas previstas para a Infraestrutura Nacional de Dados Espaciais
+                (INDE).
 
+                A elaboração das cartas topográficas será executada em 5 (cinco) lotes de produção cartográfica. Além da
+                base cartográfica digital contínua serão entregues as imagens brutas, os modelos digitais de superfície,
+                os modelos digitais do terreno e as ortoimagens de cada carta produzida, além da carta topográfica em
+                formato matricial.
+            </p>
+        </section>
+        <section id="uraricoera" class="section-end">
+            <div class="spacer"></div>
+            <h2 class="title">Exercício Uraricoera</h2>
+            <p class="description">
+                O objetivo do presente projeto consiste na elaboração de 48 cartas topográficas na escala 1:50.000
+                distribuídas no estado de Roraima visando atender demanda do COTER relativa a realização de exercícios
+                de Problemas Militares Simulados.
+            </p>
+        </section>
+        <section id="campo-instrucao-25k">
+            <div class="spacer"></div>
+            <h2 class="title">Mapeamento de Áreas de Interesse da Força Terrestre - Campos de Instrução</h2>
+            <p class="description">
+                Execução de mapeamento topográfico, totalizando 24 folhas na escala 1:25.000,
+                referentes à 5 (cinco) Campos de Instrução (CIB, CISM, CIR, CIMH e CIBSB) da Área de
+                Suprimento Cartográfico (ASC) do 1º Centro de Geoinformação e que estão contidos na
+                área de responsabilidade do Comando Militar do Sul.
+                <br>
+                - Escala 1:25.000
+            </p>
+        </section>
+        <section id="campo-instrucao-50k" class="section-end">
+            <div class="spacer"></div>
+            <p class="description">
+                - Escala 1:50.000
+            </p>
+        </section>
+        <div class="spacer"></div>
+        <section id="santa-catarina-25k" class="section-end">
+            <h2 class="title">Mapeamento de Áreas de Interesse da Força Terrestre - Santa Catarina</h2>
+            <p class="description">
+                Execução de mapeamento topográfico, totalizando 42 e 168 folhas nas escalas
+                1:50.000 e 1:25.000, respectivamente, da Área de Suprimento Cartográfico (ASC) do 1º
+                Centro de Geoinformação.
+                <br>
+                - Escala 1:25.000
+            </p>
+        </section>
+        <section id="santa-catarina-50k" class="section-end">
+            <div class="spacer"></div>
+            <p class="description">
+                - Escala 1:50.000
+            </p>
+        </section>
+        <div class="spacer"></div>
+        <section id="radiografia-am" class="section-end">
+            <h2 class="title">Projeto Radiografia da Amazônia</h2>
+            <p class="description">
+                O 1º CGEO foi responsável pela aquisição dos dados geoespaciais vetoriais (altimetria, hidrografia e
+                planimetria) e edição de cartas topográficas, com base nos dados geoespaciais de vegetação obtidos pelo
+                2º CGEO (Brasília-DF), da área já imageada do projeto.
+            </p>
+        </section>
+        <div class="spacer"></div>
+        <section id="sisfron-pr" class="section-end">
+            <h2 class="title">SISFRON - Paraná</h2>
+            <p class="description">
+                Execução de mapeamento topográfico, totalizando 44 cartas topográficas e seus dados vetoriais na escala
+                1:25.000 da região de fronteira do Paraná.
+
+            </p>
+        </section>
         <div class="spacer"></div>
 
     </div>
-    <script>
-        const map = new mapboxgl.Map({
-            container: 'map',
-            style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
-            center: [-0.15591514, 51.51830379],
-            zoom: 15.5,
-            bearing: 27,
-            pitch: 45
-        });
-
-        const chapters = {
-            'baker': {
-                bearing: 27,
-                center: [-0.15591514, 51.51830379],
-                zoom: 15.5,
-                pitch: 20
-            },
-            'aldgate': {
-                duration: 6000,
-                center: [-71.08482, 45.3052400000002],
-                bearing: 150,
-                zoom: 15,
-                pitch: 0
-            },
-            'london-bridge': {
-                bearing: 90,
-                center: [-0.08533793, 51.50438536],
-                zoom: 13,
-                speed: 0.6,
-                pitch: 40
-            },
-            'woolwich': {
-                bearing: 90,
-                center: [0.05991101, 51.48752939],
-                zoom: 12.3
-            },
-            'gloucester': {
-                bearing: 45,
-                center: [-0.18335806, 51.49439521],
-                zoom: 15.3,
-                pitch: 20,
-                speed: 0.5
-            },
-            'caulfield-gardens': {
-                bearing: 180,
-                center: [-0.19684993, 51.5033856],
-                zoom: 12.3
-            },
-            'telegraph': {
-                bearing: 90,
-                center: [-0.10669358, 51.51433123],
-                zoom: 17.3,
-                pitch: 40
-            },
-            'charing-cross': {
-                bearing: 90,
-                center: [-0.12416858, 51.50779757],
-                zoom: 14.3,
-                pitch: 20
-            }
-        };
-
-        let activeChapterName = 'baker';
-        function setActiveChapter(chapterName) {
-            if (chapterName === activeChapterName) return;
-
-            map.flyTo(chapters[chapterName]);
-
-            document.getElementById(chapterName).classList.add('active');
-            document.getElementById(activeChapterName).classList.remove('active');
-
-            activeChapterName = chapterName;
-        }
-
-        function isElementOnScreen(id) {
-            const element = document.getElementById(id);
-            const bounds = element.getBoundingClientRect();
-            return bounds.top < window.innerHeight && bounds.bottom > 0;
-        }
-
-        function loadLegend() {
-            var layers = ['0-10', '10-20', '20-50', '50-100', '100-200', '200-500', '500-1000', '1000+'];
-            var colors = ['#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C', '#FC4E2A', '#E31A1C', '#BD0026', '#800026'];
-            const legend = document.getElementById('legend');
-            legend.innerHTML = ''
-            for (i = 0; i < layers.length; i++) {
-                var layer = layers[i];
-                var color = colors[i];
-                var item = document.createElement('div');
-                var key = document.createElement('span');
-                key.className = 'legend-key';
-                key.style.backgroundColor = color;
-
-                var value = document.createElement('span');
-                value.className = 'legend-value';
-                value.innerHTML = layer;
-                item.appendChild(key);
-                item.appendChild(value);
-                legend.appendChild(item);
-            }
-        }
-
-        function loadGeoJSON(chapterName) {
-            if (chapterName === activeChapterName) return;
-            //if (map.getLayer(activeChapterName)) map.removeLayer(activeChapterName);
-            fetch(`data/${chapterName}.json`
-                , {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    }
-                }
-            )
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(async function (myJson) {
-                    while (!map.loaded()) {
-                        await sleep(2)
-                    }
-                    map.addSource(chapterName, myJson.geom)
-                    var style = JSON.parse(JSON.stringify(myJson.style))
-                    style.id = chapterName
-                    style.source = chapterName
-                    map.addLayer(style)
-                });
-
-        }
-
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-
-        window.onscroll = () => {
-            for (const chapterName in chapters) {
-                if (isElementOnScreen(chapterName)) {
-                    loadGeoJSON(chapterName)
-                    loadLegend()
-                    setActiveChapter(chapterName)
-                    break;
-                }
-            }
-        };
-
-    </script>
-
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
