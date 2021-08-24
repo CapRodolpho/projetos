@@ -1,6 +1,6 @@
 {
 	"type" : "FeatureCollection",
-	"name" : "pddmt",
+	"name" : "ci_25k",
 	"features" : [
 		{
 			"type" : "Feature",
@@ -26,7 +26,8 @@
 			},
 			"properties" : {
 				"id" : 1,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2980-1-SO"
 			}
 		},
 		{
@@ -53,7 +54,8 @@
 			},
 			"properties" : {
 				"id" : 2,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2979-2-SE"
 			}
 		},
 		{
@@ -80,7 +82,8 @@
 			},
 			"properties" : {
 				"id" : 3,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2962-4-NE"
 			}
 		},
 		{
@@ -107,7 +110,8 @@
 			},
 			"properties" : {
 				"id" : 4,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2963-3-NO"
 			}
 		},
 		{
@@ -134,7 +138,8 @@
 			},
 			"properties" : {
 				"id" : 5,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-2-SO"
 			}
 		},
 		{
@@ -161,7 +166,8 @@
 			},
 			"properties" : {
 				"id" : 6,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-3-NE"
 			}
 		},
 		{
@@ -188,7 +194,8 @@
 			},
 			"properties" : {
 				"id" : 7,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-4-NO"
 			}
 		},
 		{
@@ -215,7 +222,8 @@
 			},
 			"properties" : {
 				"id" : 8,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2969-3-SO"
 			}
 		},
 		{
@@ -242,7 +250,8 @@
 			},
 			"properties" : {
 				"id" : 9,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2986-1-NO"
 			}
 		},
 		{
@@ -269,7 +278,8 @@
 			},
 			"properties" : {
 				"id" : 10,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2985-2-NE"
 			}
 		},
 		{
@@ -296,7 +306,8 @@
 			},
 			"properties" : {
 				"id" : 11,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2968-4-SE"
 			}
 		},
 		{
@@ -323,7 +334,8 @@
 			},
 			"properties" : {
 				"id" : 12,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2980-1-NO"
 			}
 		},
 		{
@@ -350,7 +362,8 @@
 			},
 			"properties" : {
 				"id" : 13,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-1-SE"
 			}
 		},
 		{
@@ -377,7 +390,8 @@
 			},
 			"properties" : {
 				"id" : 14,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2962-4-SE"
 			}
 		},
 		{
@@ -404,7 +418,8 @@
 			},
 			"properties" : {
 				"id" : 15,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2963-3-SO"
 			}
 		},
 		{
@@ -431,7 +446,8 @@
 			},
 			"properties" : {
 				"id" : 16,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2979-2-NE"
 			}
 		},
 		{
@@ -458,7 +474,8 @@
 			},
 			"properties" : {
 				"id" : 17,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2927-2-SE"
 			}
 		},
 		{
@@ -485,7 +502,8 @@
 			},
 			"properties" : {
 				"id" : 18,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2927-4-NO"
 			}
 		},
 		{
@@ -512,7 +530,8 @@
 			},
 			"properties" : {
 				"id" : 19,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2927-2-SO"
 			}
 		},
 		{
@@ -539,7 +558,8 @@
 			},
 			"properties" : {
 				"id" : 20,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2927-4-NE"
 			}
 		},
 		{
@@ -566,7 +586,8 @@
 			},
 			"properties" : {
 				"id" : 21,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2965-1-SE"
 			}
 		},
 		{
@@ -593,7 +614,8 @@
 			},
 			"properties" : {
 				"id" : 22,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2965-3-NO"
 			}
 		},
 		{
@@ -620,7 +642,8 @@
 			},
 			"properties" : {
 				"id" : 23,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2965-3-NE"
 			}
 		},
 		{
@@ -647,7 +670,8 @@
 			},
 			"properties" : {
 				"id" : 24,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2965-1-SO"
 			}
 		}
 	]

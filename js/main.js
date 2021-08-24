@@ -3,7 +3,7 @@ const initZoom = {
     zoom: 4.83
 }
 
-const map = new mapboxgl.Map({
+const map = new maplibregl.Map({
     container: 'map',
     style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
     ...initZoom
@@ -22,6 +22,7 @@ function isElementOnScreen(id) {
             || (rect.x > window.innerWidth || rect.y > window.innerHeight)
         );
     } catch (error) {
+        console.log(error)
         return false
     }
 }
@@ -31,7 +32,7 @@ function loadLegend(chapterName) {
     var colors = chapters[chapterName].legend.filter((value, index) => { return (index % 2) != 0 });
 
     const legend = document.getElementById('legend');
-    legend.style.height = `${layers.length * 18.2}px`
+    legend.style.height = `${layers.length * 22}px`
     legend.style.display = 'block'
     legend.innerHTML = ''
     for (i = 0; i < layers.length; i++) {
@@ -77,7 +78,7 @@ function loadGeoJSON(chapterName) {
 }
 
 async function setCurrentChapter(chapterName) {
-    map.flyTo(chapters[chapterName].zoom);
+    map.fitBounds(chapters[chapterName].zoom);
     //document.getElementById(chapterName).classList.add('active');
     await loadGeoJSON(chapterName)
     loadLegend(chapterName)
@@ -105,31 +106,39 @@ function unsetChapter() {
     legend.style.display = 'none'
 }
 
-window.onscroll = async () => {
+handleScroll = async (e) => {
     let loaded = false;
-    for (const chapterName in chapters) {
-        if (
-            isElementOnScreen(chapterName) &&
-            chapters[chapterName] != undefined
-        ) {
-            loaded = true;
-            if (chapterName == activeChapterName) break
-            unsetChapter()
-            await setCurrentChapter(chapterName)
-            break;
+    if (e.target.scrollTop > 0) {
+        for (const chapterName in chapters) {
+            if (
+                isElementOnScreen(chapterName) &&
+                chapters[chapterName] != undefined
+            ) {
+                loaded = true;
+                if (chapterName == activeChapterName) break
+                unsetChapter()
+                await setCurrentChapter(chapterName)
+                break;
+            }
         }
     }
     if (!loaded) unsetChapter()
-};
+}
+
+
+document.getElementById('info').onscroll = handleScroll
+
 
 map.on('load', () => {
-    map.flyTo( initZoom )
-    window.scrollTo(0, 0)
+    map.flyTo(initZoom)
+    document.getElementById('info').scrollTo(0, 0)
     /* map.on('mouseup', () => {
-        const { lng, lat } = map.getCenter();
-        console.log([lng, lat])
         console.log(map.getZoom())
     }); */
 })
+
+
+//map.scrollZoom.disable();
+map.addControl(new maplibregl.NavigationControl());
 
 

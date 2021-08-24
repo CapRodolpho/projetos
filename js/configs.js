@@ -57,11 +57,10 @@ const legends = {
 
 const chapters = {
     'generalizacao-cartografica-50k': {
-        zoom: {
-            center: [-52.22622678432623, -27.137993330284196],
-            zoom: 5.8,
-            speed: 0.2
-        },
+        zoom: [
+            [-54.60516441090726, -31.59015763447726], // southwestern corner of the bounds
+            [-50.14483553439275, -22.90972914019692] // northeastern corner of the bounds
+        ],
         legend: legends['generalizacao-cartografica'],
         styles: [
             {
@@ -83,16 +82,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'generalizacao-cartografica-50k-text',
+                'source': 'generalizacao-cartografica-50k',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 7.4,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'generalizacao-cartografica-100k': {
-        zoom: {
-
-            center: [-52.92679195401877, -27.156225041901187],
-            zoom: 5.9,
-            speed: 0.1
-        },
+        zoom: [
+            [-54.60516441090726, -31.59015763447726], // southwestern corner of the bounds
+            [-50.14483553439275, -22.90972914019692] // northeastern corner of the bounds
+        ],
         legend: legends['generalizacao-cartografica'],
         styles: [
             {
@@ -114,15 +125,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'generalizacao-cartografica-100k-text',
+                'source': 'generalizacao-cartografica-100k',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 6.14,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'plano-desenvolvimento': {
-        zoom: {
-            center: [-54.703820489471184, -30.703135363313734],
-            zoom: 6.6,
-            speed: 0.4
-        },
+        zoom: [
+            [-58.999999898, -32.999999850000002], // southwestern corner of the bounds
+            [-52.0000001041, -27.499999969] // northeastern corner of the bounds
+        ],
         legend: legends['plano-desenvolvimento'],
         styles: [
             {
@@ -144,16 +168,27 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'plano-desenvolvimento-text',
+                'source': 'plano-desenvolvimento',
+                "type": "symbol",
+                "maxzoom": 10,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'mapeamento-interesse-da-forca-25k': {
-        zoom: {
-
-            center: [-54.586648393294354, -28.581908610413116],
-            zoom: 5.46,
-            speed: 0.4
-        },
+        zoom: [
+            [-57.85792524319584, -33.96505531990365], // southwestern corner of the bounds
+            [-50.14207493280416, -22.909789655302163] // northeastern corner of the bounds
+        ],
         legend: legends['mapeamento-interesse-da-forca'],
         styles: [
             {
@@ -175,16 +210,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'mapeamento-interesse-da-forca-25k-text',
+                'source': 'mapeamento-interesse-da-forca-25k',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 8.86,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'mapeamento-interesse-da-forca-50k': {
-        zoom: {
-
-            center: [-53.06753045861967, -27.55097306338611],
-            zoom: 6.07,
-            speed: 0.1
-        },
+        zoom: [
+            [-54.104642771209704, -31.090174775111926],
+            [-50.395357523790295, -23.909732006690916]
+        ],
         legend: legends['mapeamento-interesse-da-forca'],
         styles: [
             {
@@ -206,16 +253,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'mapeamento-interesse-da-forca-50k-text',
+                'source': 'mapeamento-interesse-da-forca-50k',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 7.34,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'mapeamento-interesse-da-forca-100k': {
-        zoom: {
-
-            center: [-52.4209731466492, -27.58217773873597],
-            zoom: 6.12,
-            speed: 0.1
-        },
+        zoom:[
+            [-54.104642771209704, -31.090174775111926],
+            [-50.395357523790295, -23.909732006690916]
+        ],
         legend: legends['mapeamento-interesse-da-forca'],
         styles: [
             {
@@ -237,16 +296,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'mapeamento-interesse-da-forca-100k-text',
+                'source': 'mapeamento-interesse-da-forca-100k',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 6.03,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'mapeamento-interesse-da-forca-250k': {
-        zoom: {
-
-            center: [-53.050902075615795, -27.576913170912206],
-            zoom: 6.12,
-            speed: 0.1
-        },
+        zoom: [
+            [-54.104642487394564, -31.09019171550016],
+            [-52.39535777550543, -23.909716233711624]
+        ],
         legend: legends['mapeamento-interesse-da-forca'],
         styles: [
             {
@@ -268,16 +339,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'mapeamento-interesse-da-forca-250k-text',
+                'source': 'mapeamento-interesse-da-forca-250k',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 4.56,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'sisfron-ms': {
-        zoom: {
-
-            center: [-57.481443677737275, -20.63317130738001],
-            zoom: 8.24,
-            speed: 0.4
-        },
+        zoom: [
+            [-58.00961789820789, -21.009031787082876],
+            [-56.990381788192096, -19.990966854945665]
+        ],
         legend: legends['sisfron'],
         styles: [
             {
@@ -299,16 +382,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'sisfron-ms-text',
+                'source': 'sisfron-ms',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 8.88,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'sisfron-rr': {
-        zoom: {
-
-            center: [-61.84761897980104, 3.8584791939794343],
-            zoom: 7.51,
-            speed: 0.9
-        },
+        zoom: [
+            [-63.759010716772494, 3.990958376806931],
+            [-59.990989283227506, 4.509041501813903]
+        ],
         legend: legends['sisfron'],
         styles: [
             {
@@ -330,16 +425,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'sisfron-rr-text',
+                'source': 'sisfron-rr',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 7.29,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'rio-grande-do-sul': {
-        zoom: {
-
-            center: [-51.84956962370279, -30.4171421915292],
-            zoom: 7.35,
-            speed: 0.9
-        },
+        zoom: [
+            [-52.51051155017842, -31.384018169281973],
+            [-50.23948867872158, -29.24097876335743]
+        ],
         legend: legends['outros'],
         styles: [
             {
@@ -361,16 +468,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'rio-grande-do-sul-text',
+                'source': 'rio-grande-do-sul',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 8.89,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'uraricoera': {
-        zoom: {
-
-            center: [-60.980116513115775, 3.0402035676133465],
-            zoom: 7.27,
-            speed: 0.9
-        },
+        zoom: [
+            [-61.509012475599526, 1.4909562825715987],
+            [-60.49098722400048, 4.75904295524796]
+        ],
         legend: legends['outros'],
         styles: [
             {
@@ -392,16 +511,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'uraricoera-text',
+                'source': 'uraricoera',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 7.26,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'campo-instrucao-25k': {
-        zoom: {
-
-            center: [-52.56447005601535, -28.464887988160896],
-            zoom: 6.69,
-            speed: 0.9
-        },
+        zoom: [
+            [-55.76038790313186, -30.259015085434463],
+            [-50.11461197696814, -26.115978807393443]
+        ],
         legend: legends['outros'],
         styles: [
             {
@@ -423,16 +554,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'campo-instrucao-25k-text',
+                'source': 'campo-instrucao-25k',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 8.86,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'campo-instrucao-50k': {
-        zoom: {
-
-            center: [-52.56447005601535, -28.464887988160896],
-            zoom: 6.69,
-            speed: 0.1
-        },
+        zoom: [
+            [-55.76038790313186, -30.259015085434463],
+            [-50.11461197696814, -26.115978807393443]
+        ],
         legend: legends['outros'],
         styles: [
             {
@@ -454,16 +597,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'campo-instrucao-50k-text',
+                'source': 'campo-instrucao-50k',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 9.01,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'santa-catarina-25k': {
-        zoom: {
-
-            center: [-50.950083965560566, -27.33157771494986],
-            zoom: 7.68,
-            speed: 0.1
-        },
+        zoom: [
+            [-52.26021357165334, -28.509022154962935],
+            [-49.98978660234666, -26.24097472235442]
+        ],
         legend: legends['outros'],
         styles: [
             {
@@ -485,16 +640,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'santa-catarina-25k-text',
+                'source': 'santa-catarina-25k',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 9.01,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'santa-catarina-50k': {
-        zoom: {
-
-            center: [-50.950083965560566, -27.33157771494986],
-            zoom: 7.68,
-            speed: 0.1
-        },
+        zoom: [
+            [-52.26021357165334, -28.509022154962935],
+            [-49.98978660234666, -26.24097472235442]
+        ],
         legend: legends['outros'],
         styles: [
             {
@@ -516,16 +683,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'santa-catarina-50k-text',
+                'source': 'santa-catarina-50k',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 7.4,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'radiografia-am': {
-        zoom: {
-
-            center: [-63.37555374085974, -2.7845044058285993],
-            zoom: 5.07,
-            speed: 0.9
-        },
+        zoom: [
+            [-73.75908278949825, -9.508997036002405],
+            [-53.99091741540177, 5.508999366522698]
+        ],
         legend: legends['outros'],
         styles: [
             {
@@ -547,16 +726,28 @@ const chapters = {
                     'line-color': '#050505',
                     'line-width': 0.5
                 }
+            },
+            {
+                'id': 'radiografia-am-text',
+                'source': 'radiografia-am',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 7.4,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
+                }
             }
         ]
     },
     'sisfron-pr': {
-        zoom: {
-
-            center: [-53.983634785859465, -23.779145473689596],
-            zoom: 8.24,
-            speed: 0.9
-        },
+        zoom: [
+            [-54.384866243172475, -24.509027741479414],
+            [-53.490134107727535, -22.9909701451744]
+        ],
         legend: legends['outros'],
         styles: [
             {
@@ -577,6 +768,20 @@ const chapters = {
                 'paint': {
                     'line-color': '#050505',
                     'line-width': 0.5
+                }
+            },
+            {
+                'id': 'sisfron-pr-text',
+                'source': 'sisfron-pr',
+                "type": "symbol",
+                "maxzoom": 10,
+                "minzoom": 8.89,
+                'layout': {
+                    'text-field': ['to-string', ['get', 'identificador']]
+                  
+                },
+                'paint': {
+                    
                 }
             }
         ]

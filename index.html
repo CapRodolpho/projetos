@@ -1,197 +1,235 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <title>Projetos</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link href="https://cdn.maptiler.com/maplibre-gl-js/v1.13.0-rc.4/mapbox-gl.css" rel="stylesheet" />
-    <script src="https://cdn.maptiler.com/maplibre-gl-js/v1.13.0-rc.4/mapbox-gl.js"></script>
-    <link href="https://1cgeo.github.io/projetos/css/styles.css" rel="stylesheet" />
-    <script src="https://1cgeo.github.io/projetos/js/configs.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <script src="./js/configs.js"></script>
 </head>
 
 <body>
-    <style>
-        
-    </style>
 
-    <div id="map"></div>
-    <div class='map-overlay' id='legend'></div>
-    <div id="features">
-        <section class="section-end">
-            <div style="text-align: center;">
-                <img class="logo" src="https://1cgeo.github.io/projetos/images/1cgeo.png" alt="Divisão de Geoinformação">
-            </div>
-            <h2 class="title">Projetos</h2>
-            <div class='arrow-animation'>
-                <img class="arrow-down" src="https://1cgeo.github.io/projetos/images/arrow-down.png">
-            </div>
-            <div class="spacer"></div>
-        </section>
-        <section id="generalizacao-cartografica-50k">
-            <h2 class="title">Generalização Cartográfica 2021</h2>
-            <p class="description">
-                O objetivo do presente projeto consiste em realizar a Generalização Cartográfica
-                na escala 1:50.000 e 1:100.000 de produtos na região de Paraná, Santa Catarina e Rio
-                Grande do Sul, para gerar 46 cartas topográficas na escala 1:50.000 e 15 cartas
-                topográficas na escala 1:100.000 visando atender a meta 11 do Plano Interno de Trabalho
-                (PIT) 2021 da Diretoria de Serviço Geográfico.
-            </p>
-            <br>
-            <p class="description">- Generalização 1:50.000</p>
-        </section>
-        <div class="spacer"></div>
-        <section id="generalizacao-cartografica-100k" class="section-end">
-            <p class="description">
-                - Generalização 1:100.000
-            </p>
-            <div class="spacer"></div>
-        </section>
-        <div class="spacer"></div>
-        <section id="plano-desenvolvimento" class="section-end">
-            <h2 class="title">Plano de Desenvolvimento da Doutrina Militar Terrestre 2021</h2>
-            <p class="description">
-                O objetivo do presente projeto consiste na elaboração de 52 cartas topográficas na escala entre
-                1:100.000 visando atender o exercício de adestramento em Jogo de Guerra do C Av Ex para a região do CMS.
-            </p>
-        </section>
-        <div class="spacer"></div>
-        <section id="mapeamento-interesse-da-forca-25k">
-            <h2 class="title">Mapeamento de Áreas de Interesse da Força Terrestre 2021</h2>
-            <p class="description">
-                O objetivo do presente projeto consiste na elaboração de cartas ortoimagens em escalas entre 1:25.000 e
-                1:250.000 de áreas de interesse da Força Terrestre pelo território nacional. A Área de Suprimento
-                Cartográfico (ASC) do 1º Centro de Geoinformação (1º CGEO) corresponde à área de responsabilidade do
-                Comando Militar do Sul (CMS), abrangendo os estados do Rio Grande do Sul, Santa Catarina e Paraná. Dessa
-                forma, o 1º CGEO será responsável por executar esse projeto em sua respectiva área de responsabilidade.
-                <br>
-                - Escala 1:25.000
-            </p>
-        </section>
-        <div class="spacer"></div>
-        <section id="mapeamento-interesse-da-forca-50k">
-            <p class="description">
-                - Escala 1:50.000
-            </p>
-        </section>
-        <div class="spacer"></div>
-        <section id="mapeamento-interesse-da-forca-100k">
-            <p class="description">
-                - Escala 1:100.000
-            </p>
-        </section>
-        <div class="spacer"></div>
-        <section id="mapeamento-interesse-da-forca-250k" class="section-end">
-            <p class="description">
-                - Escala 1:250.000
-            </p>
-            <div class="spacer"></div>
-        </section>
-        <section id="sisfron-ms" class="section-end">
-            <div class="spacer"></div>
-            <h2 class="title">SISFRON</h2>
-            <p class="description">
-                O projeto SISFRON – Sistema Integrado de Monitoramento de Fronteiras – tem como objetivo assegurar o
-                monitoramento da fronteira terrestre brasileira por meio de coleta, sistematização, processamento e
-                distribuição de informações, fortalecendo a presença e capacidade de ação do Estado na região. Pode-se
-                dizer que as cartas têm fundamental importância quando se trata de informações capazes de auxiliar na
-                tomada de decisão nas atividades fins do projeto. Nesse sentido, visando o atendimento das demandas do
-                Exército Brasileiro, o 1º Centro de Geoinformação (1º CGEO) ficou responsável pela elaboração de 64
-                cartas 1:25.000 do Mato Grosso do Sul e 13 cartas 1:50.000 de Roraima.
-                <br>
-                - Mato Grosso do Sul
-            </p>
-        </section>
-        <section id="sisfron-rr">
-            <div class="spacer"></div>
-            <p class="description">
-                - Roraima
-            </p>
-        </section>
-        <div class="spacer"></div>
-        <section id="rio-grande-do-sul" class="section-end">
-            <h2 class="title">Projeto de Mapeamento do Estado do Rio Grande do Sul</h2>
-            <p class="description">
-                O objetivo principal do projeto é a elaboração de 174 (cento e setenta e quatro) cartas topográficas na
-                escala 1:25.000, e seus respectivos insumos geoespaciais (ortoimagens, modelos digitais de elevação e
-                dados geoespaciais vetoriais), correspondentes à RF 1, compreendendo Porto Alegre, Região Metropolitana
-                e municípios adjacentes, identificadas segundo a nomenclatura utilizada no Mapa-Índice (MI), de acordo
-                com as Normas e Especificações Técnicas previstas para a Infraestrutura Nacional de Dados Espaciais
-                (INDE).
+    <div>
 
-                A elaboração das cartas topográficas será executada em 5 (cinco) lotes de produção cartográfica. Além da
-                base cartográfica digital contínua serão entregues as imagens brutas, os modelos digitais de superfície,
-                os modelos digitais do terreno e as ortoimagens de cada carta produzida, além da carta topográfica em
-                formato matricial.
-            </p>
-        </section>
-        <section id="uraricoera" class="section-end">
-            <div class="spacer"></div>
-            <h2 class="title">Exercício Uraricoera</h2>
-            <p class="description">
-                O objetivo do presente projeto consiste na elaboração de 48 cartas topográficas na escala 1:50.000
-                distribuídas no estado de Roraima visando atender demanda do COTER relativa a realização de exercícios
-                de Problemas Militares Simulados.
-            </p>
-        </section>
-        <section id="campo-instrucao-25k">
-            <div class="spacer"></div>
-            <h2 class="title">Mapeamento de Áreas de Interesse da Força Terrestre - Campos de Instrução</h2>
-            <p class="description">
-                Execução de mapeamento topográfico, totalizando 24 folhas na escala 1:25.000,
-                referentes à 5 (cinco) Campos de Instrução (CIB, CISM, CIR, CIMH e CIBSB) da Área de
-                Suprimento Cartográfico (ASC) do 1º Centro de Geoinformação e que estão contidos na
-                área de responsabilidade do Comando Militar do Sul.
-                <br>
-                - Escala 1:25.000
-            </p>
-        </section>
-        <section id="campo-instrucao-50k" class="section-end">
-            <div class="spacer"></div>
-            <p class="description">
-                - Escala 1:50.000
-            </p>
-        </section>
-        <div class="spacer"></div>
-        <section id="santa-catarina-25k" class="section-end">
-            <h2 class="title">Mapeamento de Áreas de Interesse da Força Terrestre - Santa Catarina</h2>
-            <p class="description">
-                Execução de mapeamento topográfico, totalizando 42 e 168 folhas nas escalas
-                1:50.000 e 1:25.000, respectivamente, da Área de Suprimento Cartográfico (ASC) do 1º
-                Centro de Geoinformação.
-                <br>
-                - Escala 1:25.000
-            </p>
-        </section>
-        <section id="santa-catarina-50k" class="section-end">
-            <div class="spacer"></div>
-            <p class="description">
-                - Escala 1:50.000
-            </p>
-        </section>
-        <div class="spacer"></div>
-        <section id="radiografia-am" class="section-end">
-            <h2 class="title">Projeto Radiografia da Amazônia</h2>
-            <p class="description">
-                O 1º CGEO foi responsável pela aquisição dos dados geoespaciais vetoriais (altimetria, hidrografia e
-                planimetria) e edição de cartas topográficas, com base nos dados geoespaciais de vegetação obtidos pelo
-                2º CGEO (Brasília-DF), da área já imageada do projeto.
-            </p>
-        </section>
-        <div class="spacer"></div>
-        <section id="sisfron-pr" class="section-end">
-            <h2 class="title">SISFRON - Paraná</h2>
-            <p class="description">
-                Execução de mapeamento topográfico, totalizando 44 cartas topográficas e seus dados vetoriais na escala
-                1:25.000 da região de fronteira do Paraná.
 
-            </p>
-        </section>
-        <div class="spacer"></div>
+        <div id="map" class="main">
+            <div class='map-overlay' id='legend'></div>
+        </div>
 
+        <div id="info" class="right">
+            <section class="section-end">
+                <div style="text-align: center;">
+                    <img class="logo" src="./images/1cgeo.png" alt="Divisão de Geoinformação">
+                </div>
+                <h2 class="title">Projetos</h2>
+                <div class='arrow-animation'>
+                    <a href="#generalizacao-cartografica-50k"> <img class="arrow-down" src="./images/arrow-down.png"> </a>
+                </div>
+                <div class="spacer"></div>
+            </section>
+            <section id="generalizacao-cartografica-50k">
+                <h2 class="title">Generalização Cartográfica 2021</h2>
+                <p class="description">
+                    O objetivo do presente projeto consiste em realizar a Generalização Cartográfica
+                    na escala 1:50.000 e 1:100.000 de produtos na região de Paraná, Santa Catarina e Rio
+                    Grande do Sul, para gerar 46 cartas topográficas na escala 1:50.000 e 15 cartas
+                    topográficas na escala 1:100.000 visando atender a meta 11 do Plano Interno de Trabalho
+                    (PIT) 2021 da Diretoria de Serviço Geográfico.
+                </p>
+                <br>
+                <p class="description">- Generalização 1:50.000</p>
+            </section>
+            <div class="spacer"></div>
+            <section id="generalizacao-cartografica-100k" class="section-end">
+                <p class="description">
+                    - Generalização 1:100.000
+                </p>
+                <div class="spacer"></div>
+            </section>
+            <div class="spacer"></div>
+            <section id="plano-desenvolvimento" class="section-end">
+                <h2 class="title">Plano de Desenvolvimento da Doutrina Militar Terrestre 2021</h2>
+                <p class="description">
+                    O objetivo do presente projeto consiste na elaboração de 52 cartas topográficas na escala entre
+                    1:100.000 visando atender o exercício de adestramento em Jogo de Guerra do C Av Ex para a região
+                    do
+                    CMS.
+                </p>
+            </section>
+            <div class="spacer"></div>
+            <section id="mapeamento-interesse-da-forca-25k">
+                <h2 class="title">Mapeamento de Áreas de Interesse da Força Terrestre 2021</h2>
+                <p class="description">
+                    O objetivo do presente projeto consiste na elaboração de cartas ortoimagens em escalas entre
+                    1:25.000 e
+                    1:250.000 de áreas de interesse da Força Terrestre pelo território nacional. A Área de
+                    Suprimento
+                    Cartográfico (ASC) do 1º Centro de Geoinformação (1º CGEO) corresponde à área de
+                    responsabilidade do
+                    Comando Militar do Sul (CMS), abrangendo os estados do Rio Grande do Sul, Santa Catarina e
+                    Paraná.
+                    Dessa
+                    forma, o 1º CGEO será responsável por executar esse projeto em sua respectiva área de
+                    responsabilidade.
+                    <br>
+                    - Escala 1:25.000
+                </p>
+            </section>
+            <div class="spacer"></div>
+            <section id="mapeamento-interesse-da-forca-50k">
+                <p class="description">
+                    - Escala 1:50.000
+                </p>
+            </section>
+            <div class="spacer"></div>
+            <section id="mapeamento-interesse-da-forca-100k">
+                <p class="description">
+                    - Escala 1:100.000
+                </p>
+            </section>
+            <div class="spacer"></div>
+            <section id="mapeamento-interesse-da-forca-250k" class="section-end">
+                <p class="description">
+                    - Escala 1:250.000
+                </p>
+                <div class="spacer"></div>
+            </section>
+            <section id="sisfron-ms" class="section-end">
+                <div class="spacer"></div>
+                <h2 class="title">SISFRON</h2>
+                <p class="description">
+                    O projeto SISFRON – Sistema Integrado de Monitoramento de Fronteiras – tem como objetivo
+                    assegurar o
+                    monitoramento da fronteira terrestre brasileira por meio de coleta, sistematização,
+                    processamento e
+                    distribuição de informações, fortalecendo a presença e capacidade de ação do Estado na região.
+                    Pode-se
+                    dizer que as cartas têm fundamental importância quando se trata de informações capazes de
+                    auxiliar
+                    na
+                    tomada de decisão nas atividades fins do projeto. Nesse sentido, visando o atendimento das
+                    demandas
+                    do
+                    Exército Brasileiro, o 1º Centro de Geoinformação (1º CGEO) ficou responsável pela elaboração de
+                    64
+                    cartas 1:25.000 do Mato Grosso do Sul e 13 cartas 1:50.000 de Roraima.
+                    <br>
+                    - Mato Grosso do Sul
+                </p>
+            </section>
+            <section id="sisfron-rr">
+                <div class="spacer"></div>
+                <p class="description">
+                    - Roraima
+                </p>
+            </section>
+            <div class="spacer"></div>
+            <section id="rio-grande-do-sul" class="section-end">
+                <h2 class="title">Projeto de Mapeamento do Estado do Rio Grande do Sul</h2>
+                <p class="description">
+                    O objetivo principal do projeto é a elaboração de 174 (cento e setenta e quatro) cartas
+                    topográficas
+                    na
+                    escala 1:25.000, e seus respectivos insumos geoespaciais (ortoimagens, modelos digitais de
+                    elevação
+                    e
+                    dados geoespaciais vetoriais), correspondentes à RF 1, compreendendo Porto Alegre, Região
+                    Metropolitana
+                    e municípios adjacentes, identificadas segundo a nomenclatura utilizada no Mapa-Índice (MI), de
+                    acordo
+                    com as Normas e Especificações Técnicas previstas para a Infraestrutura Nacional de Dados
+                    Espaciais
+                    (INDE).
+
+                    A elaboração das cartas topográficas será executada em 5 (cinco) lotes de produção cartográfica.
+                    Além da
+                    base cartográfica digital contínua serão entregues as imagens brutas, os modelos digitais de
+                    superfície,
+                    os modelos digitais do terreno e as ortoimagens de cada carta produzida, além da carta
+                    topográfica
+                    em
+                    formato matricial.
+                </p>
+            </section>
+            <section id="uraricoera" class="section-end">
+                <div class="spacer"></div>
+                <h2 class="title">Exercício Uraricoera</h2>
+                <p class="description">
+                    O objetivo do presente projeto consiste na elaboração de 48 cartas topográficas na escala
+                    1:50.000
+                    distribuídas no estado de Roraima visando atender demanda do COTER relativa a realização de
+                    exercícios
+                    de Problemas Militares Simulados.
+                </p>
+            </section>
+            <section id="campo-instrucao-25k">
+                <div class="spacer"></div>
+                <h2 class="title">Mapeamento de Áreas de Interesse da Força Terrestre - Campos de Instrução</h2>
+                <p class="description">
+                    Execução de mapeamento topográfico, totalizando 24 folhas na escala 1:25.000,
+                    referentes à 5 (cinco) Campos de Instrução (CIB, CISM, CIR, CIMH e CIBSB) da Área de
+                    Suprimento Cartográfico (ASC) do 1º Centro de Geoinformação e que estão contidos na
+                    área de responsabilidade do Comando Militar do Sul.
+                    <br>
+                    - Escala 1:25.000
+                </p>
+            </section>
+            <section id="campo-instrucao-50k" class="section-end">
+                <div class="spacer"></div>
+                <p class="description">
+                    - Escala 1:50.000
+                </p>
+            </section>
+            <div class="spacer"></div>
+            <section id="santa-catarina-25k" class="section-end">
+                <h2 class="title">Mapeamento de Áreas de Interesse da Força Terrestre - Santa Catarina</h2>
+                <p class="description">
+                    Execução de mapeamento topográfico, totalizando 42 e 168 folhas nas escalas
+                    1:50.000 e 1:25.000, respectivamente, da Área de Suprimento Cartográfico (ASC) do 1º
+                    Centro de Geoinformação.
+                    <br>
+                    - Escala 1:25.000
+                </p>
+            </section>
+            <section id="santa-catarina-50k" class="section-end">
+                <div class="spacer"></div>
+                <p class="description">
+                    - Escala 1:50.000
+                </p>
+            </section>
+            <div class="spacer"></div>
+            <section id="radiografia-am" class="section-end">
+                <h2 class="title">Projeto Radiografia da Amazônia</h2>
+                <p class="description">
+                    O 1º CGEO foi responsável pela aquisição dos dados geoespaciais vetoriais (altimetria,
+                    hidrografia e
+                    planimetria) e edição de cartas topográficas, com base nos dados geoespaciais de vegetação
+                    obtidos
+                    pelo
+                    2º CGEO (Brasília-DF), da área já imageada do projeto.
+                </p>
+            </section>
+            <div class="spacer"></div>
+            <section id="sisfron-pr" class="section-end">
+                <h2 class="title">SISFRON - Paraná</h2>
+                <p class="description">
+                    Execução de mapeamento topográfico, totalizando 44 cartas topográficas e seus dados vetoriais na
+                    escala
+                    1:25.000 da região de fronteira do Paraná.
+
+                </p>
+            </section>
+            <div class="spacer"></div>
+        </div>
     </div>
-    <script src="https://1cgeo.github.io/projetos/js/main.js"></script>
+
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

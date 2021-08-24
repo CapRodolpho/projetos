@@ -1,6 +1,6 @@
 {
 	"type" : "FeatureCollection",
-	"name" : "data",
+	"name" : "generalizacao_50k",
 	"features" : [
 		{
 			"type" : "Feature",
@@ -25,8 +25,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 4,
-				"situacao" : "Previsto"
+				"id" : 1,
+				"situacao" : "Previsto",
+				"identificador" : "2988-1"
 			}
 		},
 		{
@@ -52,8 +53,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 5,
-				"situacao" : "Previsto"
+				"id" : 2,
+				"situacao" : "Previsto",
+				"identificador" : "2988-2"
 			}
 		},
 		{
@@ -79,8 +81,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 6,
-				"situacao" : "Previsto"
+				"id" : 3,
+				"situacao" : "Previsto",
+				"identificador" : "2986-1"
 			}
 		},
 		{
@@ -106,8 +109,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 7,
-				"situacao" : "Previsto"
+				"id" : 4,
+				"situacao" : "Previsto",
+				"identificador" : "2986-2"
 			}
 		},
 		{
@@ -133,8 +137,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 8,
-				"situacao" : "Previsto"
+				"id" : 5,
+				"situacao" : "Previsto",
+				"identificador" : "2986-3"
 			}
 		},
 		{
@@ -160,8 +165,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 9,
-				"situacao" : "Previsto"
+				"id" : 6,
+				"situacao" : "Previsto",
+				"identificador" : "2986-4"
 			}
 		},
 		{
@@ -187,8 +193,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 10,
-				"situacao" : "Previsto"
+				"id" : 7,
+				"situacao" : "Previsto",
+				"identificador" : "2987-1"
 			}
 		},
 		{
@@ -214,8 +221,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 11,
-				"situacao" : "Previsto"
+				"id" : 8,
+				"situacao" : "Previsto",
+				"identificador" : "2987-2"
 			}
 		},
 		{
@@ -241,8 +249,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 12,
-				"situacao" : "Previsto"
+				"id" : 9,
+				"situacao" : "Previsto",
+				"identificador" : "2987-3"
 			}
 		},
 		{
@@ -268,8 +277,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 13,
-				"situacao" : "Previsto"
+				"id" : 10,
+				"situacao" : "Previsto",
+				"identificador" : "2987-4"
 			}
 		},
 		{
@@ -295,8 +305,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 14,
-				"situacao" : "Previsto"
+				"id" : 11,
+				"situacao" : "Previsto",
+				"identificador" : "2998-2"
 			}
 		},
 		{
@@ -322,8 +333,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 15,
-				"situacao" : "Previsto"
+				"id" : 12,
+				"situacao" : "Previsto",
+				"identificador" : "2998-4"
 			}
 		},
 		{
@@ -349,8 +361,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 16,
-				"situacao" : "Previsto"
+				"id" : 13,
+				"situacao" : "Edição",
+				"identificador" : "3012-2"
 			}
 		},
 		{
@@ -376,8 +389,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 17,
-				"situacao" : "Edição"
+				"id" : 14,
+				"situacao" : "Edição",
+				"identificador" : "2969-2"
 			}
 		},
 		{
@@ -403,8 +417,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 18,
-				"situacao" : "Previsto"
+				"id" : 15,
+				"situacao" : "Previsto",
+				"identificador" : "2969-4"
 			}
 		},
 		{
@@ -430,8 +445,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 19,
-				"situacao" : "Previsto"
+				"id" : 16,
+				"situacao" : "Previsto",
+				"identificador" : "2999-1"
 			}
 		},
 		{
@@ -457,8 +473,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 20,
-				"situacao" : "Previsto"
+				"id" : 17,
+				"situacao" : "Previsto",
+				"identificador" : "2999-2"
 			}
 		},
 		{
@@ -484,8 +501,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 21,
-				"situacao" : "Previsto"
+				"id" : 18,
+				"situacao" : "Previsto",
+				"identificador" : "2999-3"
 			}
 		},
 		{
@@ -511,8 +529,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 22,
-				"situacao" : "Previsto"
+				"id" : 19,
+				"situacao" : "Edição",
+				"identificador" : "2999-4"
 			}
 		},
 		{
@@ -538,8 +557,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 23,
-				"situacao" : "Previsto"
+				"id" : 20,
+				"situacao" : "Previsto",
+				"identificador" : "3000-1"
 			}
 		},
 		{
@@ -565,8 +585,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 24,
-				"situacao" : "Previsto"
+				"id" : 21,
+				"situacao" : "Edição",
+				"identificador" : "3000-3"
 			}
 		},
 		{
@@ -592,8 +613,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 25,
-				"situacao" : "Previsto"
+				"id" : 22,
+				"situacao" : "Previsto",
+				"identificador" : "2970-1"
 			}
 		},
 		{
@@ -619,8 +641,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 26,
-				"situacao" : "Previsto"
+				"id" : 23,
+				"situacao" : "Previsto",
+				"identificador" : "2970-2"
 			}
 		},
 		{
@@ -646,8 +669,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 27,
-				"situacao" : "Previsto"
+				"id" : 24,
+				"situacao" : "Previsto",
+				"identificador" : "2970-3"
 			}
 		},
 		{
@@ -673,8 +697,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 28,
-				"situacao" : "Previsto"
+				"id" : 25,
+				"situacao" : "Previsto",
+				"identificador" : "2970-4"
 			}
 		},
 		{
@@ -700,8 +725,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 29,
-				"situacao" : "Previsto"
+				"id" : 26,
+				"situacao" : "Previsto",
+				"identificador" : "2953-3"
 			}
 		},
 		{
@@ -727,8 +753,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 30,
-				"situacao" : "Previsto"
+				"id" : 27,
+				"situacao" : "Previsto",
+				"identificador" : "2971-1"
 			}
 		},
 		{
@@ -754,8 +781,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 31,
-				"situacao" : "Previsto"
+				"id" : 28,
+				"situacao" : "Previsto",
+				"identificador" : "2971-2"
 			}
 		},
 		{
@@ -781,8 +809,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 32,
-				"situacao" : "Previsto"
+				"id" : 29,
+				"situacao" : "Previsto",
+				"identificador" : "2971-3"
 			}
 		},
 		{
@@ -808,8 +837,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 33,
-				"situacao" : "Previsto"
+				"id" : 30,
+				"situacao" : "Previsto",
+				"identificador" : "2971-4"
 			}
 		},
 		{
@@ -835,8 +865,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 34,
-				"situacao" : "Previsto"
+				"id" : 31,
+				"situacao" : "Previsto",
+				"identificador" : "2972-1"
 			}
 		},
 		{
@@ -862,8 +893,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 35,
-				"situacao" : "Previsto"
+				"id" : 32,
+				"situacao" : "Previsto",
+				"identificador" : "2972-3"
 			}
 		},
 		{
@@ -889,8 +921,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 36,
-				"situacao" : "Previsto"
+				"id" : 33,
+				"situacao" : "Previsto",
+				"identificador" : "2985-2"
 			}
 		},
 		{
@@ -916,8 +949,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 37,
-				"situacao" : "Previsto"
+				"id" : 34,
+				"situacao" : "Previsto",
+				"identificador" : "2985-4"
 			}
 		},
 		{
@@ -943,8 +977,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 50,
-				"situacao" : "Edição"
+				"id" : 35,
+				"situacao" : "Disseminação",
+				"identificador" : "2753-1"
 			}
 		},
 		{
@@ -970,8 +1005,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 51,
-				"situacao" : "Edição"
+				"id" : 36,
+				"situacao" : "Disseminação",
+				"identificador" : "2753-2"
 			}
 		},
 		{
@@ -997,8 +1033,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 52,
-				"situacao" : "Edição"
+				"id" : 37,
+				"situacao" : "Disseminação",
+				"identificador" : "2753-3"
 			}
 		},
 		{
@@ -1024,8 +1061,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 53,
-				"situacao" : "Edição"
+				"id" : 38,
+				"situacao" : "Disseminação",
+				"identificador" : "2753-4"
 			}
 		},
 		{
@@ -1051,8 +1089,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 54,
-				"situacao" : "Edição"
+				"id" : 39,
+				"situacao" : "Disseminação",
+				"identificador" : "2799-1"
 			}
 		},
 		{
@@ -1078,8 +1117,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 55,
-				"situacao" : "Edição"
+				"id" : 40,
+				"situacao" : "Disseminação",
+				"identificador" : "2799-2"
 			}
 		},
 		{
@@ -1105,8 +1145,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 56,
-				"situacao" : "Edição"
+				"id" : 41,
+				"situacao" : "Disseminação",
+				"identificador" : "2799-3"
 			}
 		},
 		{
@@ -1132,8 +1173,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 57,
-				"situacao" : "Edição"
+				"id" : 42,
+				"situacao" : "Disseminação",
+				"identificador" : "2799-4"
 			}
 		},
 		{
@@ -1159,8 +1201,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 58,
-				"situacao" : "Edição"
+				"id" : 43,
+				"situacao" : "Disseminação",
+				"identificador" : "2779-1"
 			}
 		},
 		{
@@ -1186,8 +1229,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 59,
-				"situacao" : "Edição"
+				"id" : 44,
+				"situacao" : "Disseminação",
+				"identificador" : "2779-2"
 			}
 		},
 		{
@@ -1213,8 +1257,9 @@
 				]
 			},
 			"properties" : {
-				"id" : 60,
-				"situacao" : "Edição"
+				"id" : 45,
+				"situacao" : "Disseminação",
+				"identificador" : "2779-3"
 			}
 		},
 		{
@@ -1240,8 +1285,65 @@
 				]
 			},
 			"properties" : {
-				"id" : 61,
-				"situacao" : "Edição"
+				"id" : 46,
+				"situacao" : "Disseminação",
+				"identificador" : "2779-4"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Polygon",
+				"coordinates" : [
+					[
+						[ -51.7500000927, -31.2499998934 ],
+						[ -51.7500000927, -31.3333300089 ],
+						[ -51.7500000927, -31.4166699311 ],
+						[ -51.7500000927, -31.4999997951 ],
+						[ -51.6666702287, -31.4999997951 ],
+						[ -51.583330055, -31.4999997951 ],
+						[ -51.500000191, -31.4999997951 ],
+						[ -51.500000191, -31.4166699311 ],
+						[ -51.500000191, -31.3333300089 ],
+						[ -51.500000191, -31.2499998934 ],
+						[ -51.583330055, -31.2499998934 ],
+						[ -51.6666702287, -31.2499998934 ],
+						[ -51.7500000927, -31.2499998934 ]
+					]
+				]
+			},
+			"properties" : {
+				"id" : 47,
+				"situacao" : "Edição",
+				"identificador" : "3012-4"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Polygon",
+				"coordinates" : [
+					[
+						[ -51.500000191, -30.9999999917 ],
+						[ -51.500000191, -31.0833298557 ],
+						[ -51.500000191, -31.166669778 ],
+						[ -51.500000191, -31.2499998934 ],
+						[ -51.4166700756, -31.2499998934 ],
+						[ -51.3333301533, -31.2499998934 ],
+						[ -51.2500000379, -31.2499998934 ],
+						[ -51.2500000379, -31.166669778 ],
+						[ -51.2500000379, -31.0833298557 ],
+						[ -51.2500000379, -30.9999999917 ],
+						[ -51.3333301533, -30.9999999917 ],
+						[ -51.4166700756, -30.9999999917 ],
+						[ -51.500000191, -30.9999999917 ]
+					]
+				]
+			},
+			"properties" : {
+				"id" : 48,
+				"situacao" : "Edição",
+				"identificador" : "3013-1"
 			}
 		}
 	]

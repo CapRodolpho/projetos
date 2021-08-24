@@ -1,6 +1,6 @@
 {
 	"type" : "FeatureCollection",
-	"name" : "pddmt",
+	"name" : "sc_25k",
 	"features" : [
 		{
 			"type" : "Feature",
@@ -26,7 +26,8 @@
 			},
 			"properties" : {
 				"id" : 1,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-4-NO"
 			}
 		},
 		{
@@ -53,7 +54,8 @@
 			},
 			"properties" : {
 				"id" : 2,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-3-NE"
 			}
 		},
 		{
@@ -80,7 +82,8 @@
 			},
 			"properties" : {
 				"id" : 3,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2877-3-NO"
 			}
 		},
 		{
@@ -107,7 +110,8 @@
 			},
 			"properties" : {
 				"id" : 4,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-4-NE"
 			}
 		},
 		{
@@ -134,7 +138,8 @@
 			},
 			"properties" : {
 				"id" : 5,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-3-SO"
 			}
 		},
 		{
@@ -161,7 +166,8 @@
 			},
 			"properties" : {
 				"id" : 6,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2888-2-NO"
 			}
 		},
 		{
@@ -188,7 +194,8 @@
 			},
 			"properties" : {
 				"id" : 7,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2888-2-NE"
 			}
 		},
 		{
@@ -215,7 +222,8 @@
 			},
 			"properties" : {
 				"id" : 8,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-1-SE"
 			}
 		},
 		{
@@ -242,7 +250,8 @@
 			},
 			"properties" : {
 				"id" : 9,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-3-SO"
 			}
 		},
 		{
@@ -269,7 +278,8 @@
 			},
 			"properties" : {
 				"id" : 10,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-1-SO"
 			}
 		},
 		{
@@ -296,7 +306,8 @@
 			},
 			"properties" : {
 				"id" : 11,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2888-2-SE"
 			}
 		},
 		{
@@ -323,7 +334,8 @@
 			},
 			"properties" : {
 				"id" : 12,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-1-NO"
 			}
 		},
 		{
@@ -350,7 +362,8 @@
 			},
 			"properties" : {
 				"id" : 13,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2904-2-SO"
 			}
 		},
 		{
@@ -377,7 +390,8 @@
 			},
 			"properties" : {
 				"id" : 14,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-2-NE"
 			}
 		},
 		{
@@ -404,7 +418,8 @@
 			},
 			"properties" : {
 				"id" : 15,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-2-SE"
 			}
 		},
 		{
@@ -431,7 +446,8 @@
 			},
 			"properties" : {
 				"id" : 16,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-4-NO"
 			}
 		},
 		{
@@ -458,7 +474,8 @@
 			},
 			"properties" : {
 				"id" : 17,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-1-SO"
 			}
 		},
 		{
@@ -485,7 +502,8 @@
 			},
 			"properties" : {
 				"id" : 18,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2876-3-NE"
 			}
 		},
 		{
@@ -512,7 +530,8 @@
 			},
 			"properties" : {
 				"id" : 19,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-1-SO"
 			}
 		},
 		{
@@ -539,7 +558,8 @@
 			},
 			"properties" : {
 				"id" : 20,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2876-4-NE"
 			}
 		},
 		{
@@ -566,7 +586,8 @@
 			},
 			"properties" : {
 				"id" : 21,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-3-NO"
 			}
 		},
 		{
@@ -593,7 +614,8 @@
 			},
 			"properties" : {
 				"id" : 22,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-3-SE"
 			}
 		},
 		{
@@ -620,7 +642,8 @@
 			},
 			"properties" : {
 				"id" : 23,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-1-NE"
 			}
 		},
 		{
@@ -647,7 +670,8 @@
 			},
 			"properties" : {
 				"id" : 24,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2887-2-NO"
 			}
 		},
 		{
@@ -674,7 +698,8 @@
 			},
 			"properties" : {
 				"id" : 25,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-2-SO"
 			}
 		},
 		{
@@ -701,7 +726,8 @@
 			},
 			"properties" : {
 				"id" : 26,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-3-SO"
 			}
 		},
 		{
@@ -728,7 +754,8 @@
 			},
 			"properties" : {
 				"id" : 27,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2876-4-SE"
 			}
 		},
 		{
@@ -755,7 +782,8 @@
 			},
 			"properties" : {
 				"id" : 28,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-1-SO"
 			}
 		},
 		{
@@ -782,7 +810,8 @@
 			},
 			"properties" : {
 				"id" : 29,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-4-SO"
 			}
 		},
 		{
@@ -809,7 +838,8 @@
 			},
 			"properties" : {
 				"id" : 30,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-3-NE"
 			}
 		},
 		{
@@ -836,7 +866,8 @@
 			},
 			"properties" : {
 				"id" : 31,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-2-NO"
 			}
 		},
 		{
@@ -863,7 +894,8 @@
 			},
 			"properties" : {
 				"id" : 32,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-1-NO"
 			}
 		},
 		{
@@ -890,7 +922,8 @@
 			},
 			"properties" : {
 				"id" : 33,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-1-NE"
 			}
 		},
 		{
@@ -917,7 +950,8 @@
 			},
 			"properties" : {
 				"id" : 34,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-2-NE"
 			}
 		},
 		{
@@ -944,7 +978,8 @@
 			},
 			"properties" : {
 				"id" : 35,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-3-SO"
 			}
 		},
 		{
@@ -971,7 +1006,8 @@
 			},
 			"properties" : {
 				"id" : 36,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-3-SE"
 			}
 		},
 		{
@@ -998,7 +1034,8 @@
 			},
 			"properties" : {
 				"id" : 37,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-1-NO"
 			}
 		},
 		{
@@ -1025,7 +1062,8 @@
 			},
 			"properties" : {
 				"id" : 38,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-4-NO"
 			}
 		},
 		{
@@ -1052,7 +1090,8 @@
 			},
 			"properties" : {
 				"id" : 39,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-4-SO"
 			}
 		},
 		{
@@ -1079,7 +1118,8 @@
 			},
 			"properties" : {
 				"id" : 40,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-4-SO"
 			}
 		},
 		{
@@ -1106,7 +1146,8 @@
 			},
 			"properties" : {
 				"id" : 41,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2876-3-NO"
 			}
 		},
 		{
@@ -1133,7 +1174,8 @@
 			},
 			"properties" : {
 				"id" : 42,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-4-SO"
 			}
 		},
 		{
@@ -1160,7 +1202,8 @@
 			},
 			"properties" : {
 				"id" : 43,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-4-SO"
 			}
 		},
 		{
@@ -1187,7 +1230,8 @@
 			},
 			"properties" : {
 				"id" : 44,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-4-NE"
 			}
 		},
 		{
@@ -1214,7 +1258,8 @@
 			},
 			"properties" : {
 				"id" : 45,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-4-SO"
 			}
 		},
 		{
@@ -1241,7 +1286,8 @@
 			},
 			"properties" : {
 				"id" : 46,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-3-NO"
 			}
 		},
 		{
@@ -1268,7 +1314,8 @@
 			},
 			"properties" : {
 				"id" : 47,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2904-2-NE"
 			}
 		},
 		{
@@ -1295,7 +1342,8 @@
 			},
 			"properties" : {
 				"id" : 48,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2887-2-NE"
 			}
 		},
 		{
@@ -1322,7 +1370,8 @@
 			},
 			"properties" : {
 				"id" : 49,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-2-NE"
 			}
 		},
 		{
@@ -1349,7 +1398,8 @@
 			},
 			"properties" : {
 				"id" : 50,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2877-4-SO"
 			}
 		},
 		{
@@ -1376,7 +1426,8 @@
 			},
 			"properties" : {
 				"id" : 51,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-4-SE"
 			}
 		},
 		{
@@ -1403,7 +1454,8 @@
 			},
 			"properties" : {
 				"id" : 52,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2888-1-NO"
 			}
 		},
 		{
@@ -1430,7 +1482,8 @@
 			},
 			"properties" : {
 				"id" : 53,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-3-SE"
 			}
 		},
 		{
@@ -1457,7 +1510,8 @@
 			},
 			"properties" : {
 				"id" : 54,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-2-NE"
 			}
 		},
 		{
@@ -1484,7 +1538,8 @@
 			},
 			"properties" : {
 				"id" : 55,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-2-SO"
 			}
 		},
 		{
@@ -1511,7 +1566,8 @@
 			},
 			"properties" : {
 				"id" : 56,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-2-SO"
 			}
 		},
 		{
@@ -1538,7 +1594,8 @@
 			},
 			"properties" : {
 				"id" : 57,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-4-SO"
 			}
 		},
 		{
@@ -1565,7 +1622,8 @@
 			},
 			"properties" : {
 				"id" : 58,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-2-SE"
 			}
 		},
 		{
@@ -1592,7 +1650,8 @@
 			},
 			"properties" : {
 				"id" : 59,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-2-SE"
 			}
 		},
 		{
@@ -1619,7 +1678,8 @@
 			},
 			"properties" : {
 				"id" : 60,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-2-SO"
 			}
 		},
 		{
@@ -1646,7 +1706,8 @@
 			},
 			"properties" : {
 				"id" : 61,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-4-NE"
 			}
 		},
 		{
@@ -1673,7 +1734,8 @@
 			},
 			"properties" : {
 				"id" : 62,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-4-SO"
 			}
 		},
 		{
@@ -1700,7 +1762,8 @@
 			},
 			"properties" : {
 				"id" : 63,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2876-4-NO"
 			}
 		},
 		{
@@ -1727,7 +1790,8 @@
 			},
 			"properties" : {
 				"id" : 64,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2866-4-SE"
 			}
 		},
 		{
@@ -1754,7 +1818,8 @@
 			},
 			"properties" : {
 				"id" : 65,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-1-SE"
 			}
 		},
 		{
@@ -1781,7 +1846,8 @@
 			},
 			"properties" : {
 				"id" : 66,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-4-NO"
 			}
 		},
 		{
@@ -1808,7 +1874,8 @@
 			},
 			"properties" : {
 				"id" : 67,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-2-NE"
 			}
 		},
 		{
@@ -1835,7 +1902,8 @@
 			},
 			"properties" : {
 				"id" : 68,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2877-3-SE"
 			}
 		},
 		{
@@ -1862,7 +1930,8 @@
 			},
 			"properties" : {
 				"id" : 69,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-1-NO"
 			}
 		},
 		{
@@ -1889,7 +1958,8 @@
 			},
 			"properties" : {
 				"id" : 70,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-1-SE"
 			}
 		},
 		{
@@ -1916,7 +1986,8 @@
 			},
 			"properties" : {
 				"id" : 71,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-2-NO"
 			}
 		},
 		{
@@ -1943,7 +2014,8 @@
 			},
 			"properties" : {
 				"id" : 72,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2904-2-SE"
 			}
 		},
 		{
@@ -1970,7 +2042,8 @@
 			},
 			"properties" : {
 				"id" : 73,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-2-SO"
 			}
 		},
 		{
@@ -1997,7 +2070,8 @@
 			},
 			"properties" : {
 				"id" : 74,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-3-NE"
 			}
 		},
 		{
@@ -2024,7 +2098,8 @@
 			},
 			"properties" : {
 				"id" : 75,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2876-4-SO"
 			}
 		},
 		{
@@ -2051,7 +2126,8 @@
 			},
 			"properties" : {
 				"id" : 76,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-2-NO"
 			}
 		},
 		{
@@ -2078,7 +2154,8 @@
 			},
 			"properties" : {
 				"id" : 77,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-4-NE"
 			}
 		},
 		{
@@ -2105,7 +2182,8 @@
 			},
 			"properties" : {
 				"id" : 78,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2877-4-NO"
 			}
 		},
 		{
@@ -2132,7 +2210,8 @@
 			},
 			"properties" : {
 				"id" : 79,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-4-SE"
 			}
 		},
 		{
@@ -2159,7 +2238,8 @@
 			},
 			"properties" : {
 				"id" : 80,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-2-NO"
 			}
 		},
 		{
@@ -2186,7 +2266,8 @@
 			},
 			"properties" : {
 				"id" : 81,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-2-SO"
 			}
 		},
 		{
@@ -2213,7 +2294,8 @@
 			},
 			"properties" : {
 				"id" : 82,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-1-SE"
 			}
 		},
 		{
@@ -2240,7 +2322,8 @@
 			},
 			"properties" : {
 				"id" : 83,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-1-NE"
 			}
 		},
 		{
@@ -2267,7 +2350,8 @@
 			},
 			"properties" : {
 				"id" : 84,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-1-NO"
 			}
 		},
 		{
@@ -2294,7 +2378,8 @@
 			},
 			"properties" : {
 				"id" : 85,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2888-1-SO"
 			}
 		},
 		{
@@ -2321,7 +2406,8 @@
 			},
 			"properties" : {
 				"id" : 86,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-4-SE"
 			}
 		},
 		{
@@ -2348,7 +2434,8 @@
 			},
 			"properties" : {
 				"id" : 87,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-3-SO"
 			}
 		},
 		{
@@ -2375,7 +2462,8 @@
 			},
 			"properties" : {
 				"id" : 88,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-2-NO"
 			}
 		},
 		{
@@ -2402,7 +2490,8 @@
 			},
 			"properties" : {
 				"id" : 89,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-1-NO"
 			}
 		},
 		{
@@ -2429,7 +2518,8 @@
 			},
 			"properties" : {
 				"id" : 90,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-1-NE"
 			}
 		},
 		{
@@ -2456,7 +2546,8 @@
 			},
 			"properties" : {
 				"id" : 91,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2888-1-SE"
 			}
 		},
 		{
@@ -2483,7 +2574,8 @@
 			},
 			"properties" : {
 				"id" : 92,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-4-SE"
 			}
 		},
 		{
@@ -2510,7 +2602,8 @@
 			},
 			"properties" : {
 				"id" : 93,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-3-NE"
 			}
 		},
 		{
@@ -2537,7 +2630,8 @@
 			},
 			"properties" : {
 				"id" : 94,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-3-NO"
 			}
 		},
 		{
@@ -2564,7 +2658,8 @@
 			},
 			"properties" : {
 				"id" : 95,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-2-NE"
 			}
 		},
 		{
@@ -2591,7 +2686,8 @@
 			},
 			"properties" : {
 				"id" : 96,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2888-1-NE"
 			}
 		},
 		{
@@ -2618,7 +2714,8 @@
 			},
 			"properties" : {
 				"id" : 97,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-4-NO"
 			}
 		},
 		{
@@ -2645,7 +2742,8 @@
 			},
 			"properties" : {
 				"id" : 98,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-3-NO"
 			}
 		},
 		{
@@ -2672,7 +2770,8 @@
 			},
 			"properties" : {
 				"id" : 99,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-3-NE"
 			}
 		},
 		{
@@ -2699,7 +2798,8 @@
 			},
 			"properties" : {
 				"id" : 100,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-3-SE"
 			}
 		},
 		{
@@ -2726,7 +2826,8 @@
 			},
 			"properties" : {
 				"id" : 101,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2877-4-NE"
 			}
 		},
 		{
@@ -2753,7 +2854,8 @@
 			},
 			"properties" : {
 				"id" : 102,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-3-SE"
 			}
 		},
 		{
@@ -2780,7 +2882,8 @@
 			},
 			"properties" : {
 				"id" : 103,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-4-NO"
 			}
 		},
 		{
@@ -2807,7 +2910,8 @@
 			},
 			"properties" : {
 				"id" : 104,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-4-NE"
 			}
 		},
 		{
@@ -2834,7 +2938,8 @@
 			},
 			"properties" : {
 				"id" : 105,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-4-NE"
 			}
 		},
 		{
@@ -2861,7 +2966,8 @@
 			},
 			"properties" : {
 				"id" : 106,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-2-SE"
 			}
 		},
 		{
@@ -2888,7 +2994,8 @@
 			},
 			"properties" : {
 				"id" : 107,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-2-SE"
 			}
 		},
 		{
@@ -2915,7 +3022,8 @@
 			},
 			"properties" : {
 				"id" : 108,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-4-NE"
 			}
 		},
 		{
@@ -2942,7 +3050,8 @@
 			},
 			"properties" : {
 				"id" : 109,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-1-NE"
 			}
 		},
 		{
@@ -2969,7 +3078,8 @@
 			},
 			"properties" : {
 				"id" : 110,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-4-SE"
 			}
 		},
 		{
@@ -2996,7 +3106,8 @@
 			},
 			"properties" : {
 				"id" : 111,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-1-SE"
 			}
 		},
 		{
@@ -3023,7 +3134,8 @@
 			},
 			"properties" : {
 				"id" : 112,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-4-SE"
 			}
 		},
 		{
@@ -3050,7 +3162,8 @@
 			},
 			"properties" : {
 				"id" : 113,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-2-SO"
 			}
 		},
 		{
@@ -3077,7 +3190,8 @@
 			},
 			"properties" : {
 				"id" : 114,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-3-NO"
 			}
 		},
 		{
@@ -3104,7 +3218,8 @@
 			},
 			"properties" : {
 				"id" : 115,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-4-NE"
 			}
 		},
 		{
@@ -3131,7 +3246,8 @@
 			},
 			"properties" : {
 				"id" : 116,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2866-4-NO"
 			}
 		},
 		{
@@ -3158,7 +3274,8 @@
 			},
 			"properties" : {
 				"id" : 117,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-1-SO"
 			}
 		},
 		{
@@ -3185,7 +3302,8 @@
 			},
 			"properties" : {
 				"id" : 118,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-3-SO"
 			}
 		},
 		{
@@ -3212,7 +3330,8 @@
 			},
 			"properties" : {
 				"id" : 119,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-3-SO"
 			}
 		},
 		{
@@ -3239,7 +3358,8 @@
 			},
 			"properties" : {
 				"id" : 120,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-3-SE"
 			}
 		},
 		{
@@ -3266,7 +3386,8 @@
 			},
 			"properties" : {
 				"id" : 121,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-1-NE"
 			}
 		},
 		{
@@ -3293,7 +3414,8 @@
 			},
 			"properties" : {
 				"id" : 122,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-1-SO"
 			}
 		},
 		{
@@ -3320,7 +3442,8 @@
 			},
 			"properties" : {
 				"id" : 123,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-3-NE"
 			}
 		},
 		{
@@ -3347,7 +3470,8 @@
 			},
 			"properties" : {
 				"id" : 124,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-1-SE"
 			}
 		},
 		{
@@ -3374,7 +3498,8 @@
 			},
 			"properties" : {
 				"id" : 125,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-3-NE"
 			}
 		},
 		{
@@ -3401,7 +3526,8 @@
 			},
 			"properties" : {
 				"id" : 126,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-1-NO"
 			}
 		},
 		{
@@ -3428,7 +3554,8 @@
 			},
 			"properties" : {
 				"id" : 127,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-3-SO"
 			}
 		},
 		{
@@ -3455,7 +3582,8 @@
 			},
 			"properties" : {
 				"id" : 128,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-2-SE"
 			}
 		},
 		{
@@ -3482,7 +3610,8 @@
 			},
 			"properties" : {
 				"id" : 129,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-2-SE"
 			}
 		},
 		{
@@ -3509,7 +3638,8 @@
 			},
 			"properties" : {
 				"id" : 130,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-2-NO"
 			}
 		},
 		{
@@ -3536,7 +3666,8 @@
 			},
 			"properties" : {
 				"id" : 131,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2889-1-SE"
 			}
 		},
 		{
@@ -3563,7 +3694,8 @@
 			},
 			"properties" : {
 				"id" : 132,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-1-NE"
 			}
 		},
 		{
@@ -3590,7 +3722,8 @@
 			},
 			"properties" : {
 				"id" : 133,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2877-3-SO"
 			}
 		},
 		{
@@ -3617,7 +3750,8 @@
 			},
 			"properties" : {
 				"id" : 134,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-4-SO"
 			}
 		},
 		{
@@ -3644,7 +3778,8 @@
 			},
 			"properties" : {
 				"id" : 135,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-3-NE"
 			}
 		},
 		{
@@ -3671,7 +3806,8 @@
 			},
 			"properties" : {
 				"id" : 136,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-2-SO"
 			}
 		},
 		{
@@ -3698,7 +3834,8 @@
 			},
 			"properties" : {
 				"id" : 137,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2866-4-NE"
 			}
 		},
 		{
@@ -3725,7 +3862,8 @@
 			},
 			"properties" : {
 				"id" : 138,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2888-2-SO"
 			}
 		},
 		{
@@ -3752,7 +3890,8 @@
 			},
 			"properties" : {
 				"id" : 139,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2877-4-SE"
 			}
 		},
 		{
@@ -3779,7 +3918,8 @@
 			},
 			"properties" : {
 				"id" : 140,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2876-3-SO"
 			}
 		},
 		{
@@ -3806,7 +3946,8 @@
 			},
 			"properties" : {
 				"id" : 141,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2877-3-NE"
 			}
 		},
 		{
@@ -3833,7 +3974,8 @@
 			},
 			"properties" : {
 				"id" : 142,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2876-3-SE"
 			}
 		},
 		{
@@ -3860,7 +4002,8 @@
 			},
 			"properties" : {
 				"id" : 143,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2879-2-NO"
 			}
 		},
 		{
@@ -3887,7 +4030,8 @@
 			},
 			"properties" : {
 				"id" : 144,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-2-NO"
 			}
 		},
 		{
@@ -3914,7 +4058,8 @@
 			},
 			"properties" : {
 				"id" : 145,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-3-SE"
 			}
 		},
 		{
@@ -3941,7 +4086,8 @@
 			},
 			"properties" : {
 				"id" : 146,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2866-4-SO"
 			}
 		},
 		{
@@ -3968,7 +4114,8 @@
 			},
 			"properties" : {
 				"id" : 147,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-4-SE"
 			}
 		},
 		{
@@ -3995,7 +4142,8 @@
 			},
 			"properties" : {
 				"id" : 148,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-2-NE"
 			}
 		},
 		{
@@ -4022,7 +4170,8 @@
 			},
 			"properties" : {
 				"id" : 149,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2904-2-NO"
 			}
 		},
 		{
@@ -4049,7 +4198,8 @@
 			},
 			"properties" : {
 				"id" : 150,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-1-SE"
 			}
 		},
 		{
@@ -4076,7 +4226,8 @@
 			},
 			"properties" : {
 				"id" : 151,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-3-NO"
 			}
 		},
 		{
@@ -4103,7 +4254,8 @@
 			},
 			"properties" : {
 				"id" : 152,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2891-3-SE"
 			}
 		},
 		{
@@ -4130,7 +4282,8 @@
 			},
 			"properties" : {
 				"id" : 153,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-4-NE"
 			}
 		},
 		{
@@ -4157,7 +4310,8 @@
 			},
 			"properties" : {
 				"id" : 154,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2887-2-SO"
 			}
 		},
 		{
@@ -4184,7 +4338,8 @@
 			},
 			"properties" : {
 				"id" : 155,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-4-NO"
 			}
 		},
 		{
@@ -4211,7 +4366,8 @@
 			},
 			"properties" : {
 				"id" : 156,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-2-SE"
 			}
 		},
 		{
@@ -4238,7 +4394,8 @@
 			},
 			"properties" : {
 				"id" : 157,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-4-SE"
 			}
 		},
 		{
@@ -4265,7 +4422,8 @@
 			},
 			"properties" : {
 				"id" : 158,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-4-NO"
 			}
 		},
 		{
@@ -4292,7 +4450,8 @@
 			},
 			"properties" : {
 				"id" : 159,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-1-NE"
 			}
 		},
 		{
@@ -4319,7 +4478,8 @@
 			},
 			"properties" : {
 				"id" : 160,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2887-2-SE"
 			}
 		},
 		{
@@ -4346,7 +4506,8 @@
 			},
 			"properties" : {
 				"id" : 161,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-3-NO"
 			}
 		},
 		{
@@ -4373,7 +4534,8 @@
 			},
 			"properties" : {
 				"id" : 162,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2905-4-SE"
 			}
 		},
 		{
@@ -4400,7 +4562,8 @@
 			},
 			"properties" : {
 				"id" : 163,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-4-NO"
 			}
 		},
 		{
@@ -4427,7 +4590,8 @@
 			},
 			"properties" : {
 				"id" : 164,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2867-3-NO"
 			}
 		},
 		{
@@ -4454,7 +4618,8 @@
 			},
 			"properties" : {
 				"id" : 165,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2878-1-SO"
 			}
 		},
 		{
@@ -4481,7 +4646,8 @@
 			},
 			"properties" : {
 				"id" : 166,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2890-1-NO"
 			}
 		},
 		{
@@ -4508,7 +4674,8 @@
 			},
 			"properties" : {
 				"id" : 167,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2906-1-SO"
 			}
 		},
 		{
@@ -4535,7 +4702,8 @@
 			},
 			"properties" : {
 				"id" : 168,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "2922-2-NE"
 			}
 		}
 	]

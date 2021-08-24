@@ -1,6 +1,6 @@
 {
 	"type" : "FeatureCollection",
-	"name" : "pddmt",
+	"name" : "ci_50k",
 	"features" : [
 		{
 			"type" : "Feature",
@@ -38,7 +38,8 @@
 			},
 			"properties" : {
 				"id" : 1,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "Campo de Instrução de Rincão"
 			}
 		},
 		{
@@ -72,7 +73,8 @@
 			},
 			"properties" : {
 				"id" : 2,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "Campo de Instrução Barão de São Borja N"
 			}
 		},
 		{
@@ -111,7 +113,8 @@
 			},
 			"properties" : {
 				"id" : 3,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "Campo de Instrução de Marechal Hermes"
 			}
 		},
 		{
@@ -145,7 +148,8 @@
 			},
 			"properties" : {
 				"id" : 4,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "Campo de Instrução Barão de São Borja S"
 			}
 		},
 		{
@@ -184,7 +188,8 @@
 			},
 			"properties" : {
 				"id" : 5,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "Campo de Instrução de Santa Maria"
 			}
 		},
 		{
@@ -223,7 +228,8 @@
 			},
 			"properties" : {
 				"id" : 6,
-				"situacao" : "Disseminação"
+				"situacao" : "Disseminação",
+				"identificador" : "Campo de Instrução de Butiá"
 			}
 		}
 	]

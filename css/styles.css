@@ -1,99 +1,35 @@
-body {
+* {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
     margin: 0;
     padding: 0;
 }
-
-#map {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-#map {
-    position: fixed;
-    width: 70%;
-}
-
-#features {
-    width: 30%;
-    margin-left: 70%;
-    font-family: sans-serif;
-    overflow-y: scroll;
-}
-
-section {
-    padding: 60px 40px;
-    line-height: 25px;
-    font-size: 13px;
-}
-
-.section-end {
-    border-bottom: 1px solid #ddd;
-}
-
-.map-overlay {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 1);
-    margin-left: 20px;
-    font-family: Arial, sans-serif;
+  
+  .main {
     overflow: auto;
-    border-radius: 3px;
-}
+    position: relative;
+    float: right;
+    width: 70%;
+    height: 100vh;
+  }
+  
+  .right {
+    overflow: auto;
+    float: left;
+    width: 30%;
+    padding: 15px;
+    text-align: center;
+    height: 100vh;
+  }
 
-.overlay {
-    position: fixed;
-    right: 0;
-    left: 0;
-    z-index: 999999;
-}
-
-#legend {
-    display: none;
-    padding: 10px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    line-height: 18px;
-    margin-bottom: 40px;
-    width: 270px;
-}
-
-.legend-key {
-    border: 1px solid black;
-    display: inline-block;
-    border-radius: 20%;
-    width: 10px;
-    height: 10px;
-    margin-left: 5px;
-}
-
-.legend-value {
-    display: inline-block;
-    margin-left: 5px;
-}
-
-.spacer {
-    padding: 55px 50px 450px;
-}
-
-.spacer-text {
-    padding: 30px 25px 125px;
-}
-
-/* section.active {
-    opacity: 1;
-}
-
-section:last-child {
-    border-bottom: none;
-    margin-bottom: 230px;
-} */
-
-.topnav {
-    background-color: #3e67b1;
-    overflow: hidden;
-}
+ 
+  
 
 .logo {
     margin: 10px 20px 5px;
@@ -110,7 +46,7 @@ section:last-child {
     overflow-wrap: break-word;
     color: rgb(0, 38, 37);
     font-family: "Charter BT", serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -134,15 +70,116 @@ section:last-child {
 }
 
 .arrow-animation {
-    float: right;
+    float: left;
     width: 100px;
     height: 100px;
     background-image: white;
     position: relative;
-    animation: mymove 2s infinite;
+    animation: mymove 4s infinite;
 }
 
 @keyframes mymove {
     from {top: 0px;}
     to {top: 150px;}
 }
+
+.spacer {
+    padding: 55px 50px 450px;
+}
+
+
+.map-overlay {
+    z-index: 100000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 1);
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+    border-radius: 3px;
+}
+
+/* #legend {
+    display: none;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 18px;
+    margin-bottom: 40px;
+    width: 270px;
+}
+ */
+
+.legend-key {
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 20%;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+}
+
+.legend-value {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+  @media only screen and (max-width: 952px) {
+    /* For mobile phones: */
+    .main {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 60vh;
+      }
+      
+      .right {
+        overflow: auto;
+        float: left;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        height: 40vh;
+      }
+
+    .logo {
+        margin: 10px 20px 5px;
+        height: 30vh;
+        width: 20vh;
+    }
+
+    .arrow-down {
+        height: 40px;
+        width: 40px;
+        background-image: white;
+    }
+    
+    .arrow-animation {
+        float: right;
+        width: 100px;
+        height: 100px;
+        background-image: white;
+        position: relative;
+        animation: mymove 2s infinite;
+    }
+    
+    @keyframes mymove {
+        from {top: -150px;}
+        to {top: 50px;}
+    }
+
+    .spacer {
+        padding: 55px 50px 550px;
+    }
+    
+
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .title {
+        font-size: 2rem;
+    }
+  }
+  
+
