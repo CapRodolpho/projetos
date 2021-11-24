@@ -15,14 +15,14 @@
     overflow: auto;
     position: relative;
     float: right;
-    width: 70%;
+    width: 60%;
     height: 100vh;
   }
   
   .right {
     overflow: auto;
     float: left;
-    width: 30%;
+    width: 40%;
     padding: 15px;
     text-align: center;
     height: 100vh;
@@ -41,7 +41,7 @@
     text-align: center;
     padding: 0px;
     margin: 0px;
-    tab-size: 4;
+    tab-size: 1;
     white-space: pre-wrap;
     overflow-wrap: break-word;
     color: rgb(0, 38, 37);
@@ -49,44 +49,29 @@
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 20px;
 }
 
 .description {
     padding: 0px;
-    margin: 0px;
+    margin: 50px;
     overflow-wrap: break-word;
     color: rgb(48, 78, 78);
     font-family: "Basic Commercial", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 100;
     line-height: 1.85;
 }
 
-.arrow-down {
-    height: 40px;
-    width: 40px;
-    background-image: white;
+.description-larger {
+  padding: 0px;
+  margin: 50px;
+  overflow-wrap: break-word;
+  color: rgb(48, 78, 78);
+  font-family: "Basic Commercial", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 100;
+  line-height: 1.85;
 }
-
-.arrow-animation {
-    float: left;
-    width: 100px;
-    height: 100px;
-    background-image: white;
-    position: relative;
-    animation: mymove 4s infinite;
-}
-
-@keyframes mymove {
-    from {top: 0px;}
-    to {top: 150px;}
-}
-
-.spacer {
-    padding: 55px 50px 450px;
-}
-
 
 .map-overlay {
     z-index: 100000;
@@ -125,61 +110,137 @@
     margin-left: 5px;
 }
 
-  @media only screen and (max-width: 952px) {
+  @media only screen and (max-width: 960px) {
     /* For mobile phones: */
     .main {
         position: relative;
         float: left;
         width: 100%;
-        height: 60vh;
+        height: 50vh;
       }
       
       .right {
         overflow: auto;
         float: left;
         width: 100%;
-        padding: 15px;
         text-align: center;
         height: 40vh;
       }
 
     .logo {
-        margin: 10px 20px 5px;
-        height: 30vh;
-        width: 20vh;
-    }
-
-    .arrow-down {
-        height: 40px;
-        width: 40px;
-        background-image: white;
+        margin: 0px;
+        padding: 0px;
+        height: 22vh;
+        width: 16.92vh;
     }
     
-    .arrow-animation {
-        float: right;
-        width: 100px;
-        height: 100px;
-        background-image: white;
-        position: relative;
-        animation: mymove 2s infinite;
-    }
-    
-    @keyframes mymove {
-        from {top: -150px;}
-        to {top: 50px;}
-    }
-
     .spacer {
         padding: 55px 50px 550px;
+    }
+
+    .title {
+      text-align: center;
+      padding: 0px;
+      margin: 0px;
+      tab-size: 1;
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      color: rgb(0, 38, 37);
+      font-family: "Charter BT", serif;
+      font-size: 1.0rem;
+      font-weight: 700;
+      line-height: 1.2;
+  }
+  
+  .description {
+      padding: 0px;
+      margin: 0px 50px 0px;
+      overflow-wrap: break-word;
+      color: rgb(48, 78, 78);
+      font-family: "Basic Commercial", sans-serif;
+      font-size: 0.7rem;
+      font-weight: 100;
+      line-height: 1.85;
+  }
+
+  .summary-list{
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+    font-size: 0.5rem;
+  }
+
+    .hideonmobile {
+      display: none;
+    }
+    .showonmobile {
+      display: initial;
     }
     
 
   }
 
-  @media only screen and (max-width: 1400px) {
+  /* @media only screen and (max-width: 1400px) {
     .title {
         font-size: 2rem;
+    }
+  } */
+  
+  @media (min-width: 960px) {
+    .hideonmobile {
+      display: initial;
+    }
+    .showonmobile {
+      display: none;
     }
   }
   
 
+
+  /* slide */
+  .swiper {
+    width: 100%;
+    height: 90%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 15px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  
+  .append-buttons {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .append-buttons a {
+    display: inline-block;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+  }
+
+  .summary-list{
+    text-align: left;
+  }
+  

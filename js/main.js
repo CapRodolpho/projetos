@@ -10,7 +10,7 @@ const map = new maplibregl.Map({
 
 });
 
-let activeChapterName = 'logo';
+let activeChapterName = null;
 
 function isElementOnScreen(id) {
     try {
@@ -22,7 +22,6 @@ function isElementOnScreen(id) {
             || (rect.x > window.innerWidth || rect.y > window.innerHeight)
         );
     } catch (error) {
-        console.log(error)
         return false
     }
 }
@@ -86,47 +85,16 @@ async function setCurrentChapter(chapterName) {
 }
 
 function unsetChapter() {
-    for (var sourceName in chapters) {
-        var styles = JSON.parse(JSON.stringify(chapters[sourceName].styles))
-        for (let style of styles) {
-            try {
-                map.removeLayer(style.id)
-            } catch (error) {
-
-            }
-        }
-        try {
-            map.removeSource(sourceName)
-        } catch (error) {
-
-        }
+    if (!activeChapterName) return
+    var styles = JSON.parse(JSON.stringify(chapters[activeChapterName].styles))
+    for (let style of styles) {
+        map.removeLayer(style.id)
     }
+    map.removeSource(activeChapterName)
     activeChapterName = ''
     const legend = document.getElementById('legend');
     legend.style.display = 'none'
 }
-
-handleScroll = async (e) => {
-    let loaded = false;
-    if (e.target.scrollTop > 0) {
-        for (const chapterName in chapters) {
-            if (
-                isElementOnScreen(chapterName) &&
-                chapters[chapterName] != undefined
-            ) {
-                loaded = true;
-                if (chapterName == activeChapterName) break
-                unsetChapter()
-                await setCurrentChapter(chapterName)
-                break;
-            }
-        }
-    }
-    if (!loaded) unsetChapter()
-}
-
-
-document.getElementById('info').onscroll = handleScroll
 
 
 map.on('load', () => {
@@ -140,5 +108,108 @@ map.on('load', () => {
 
 //map.scrollZoom.disable();
 map.addControl(new maplibregl.NavigationControl());
+
+function plugin({ swiper, extendParams, on }) {
+    extendParams({
+        debugger: false,
+    });
+
+    on('slideChange', async () => {
+        if (!swiper.slides[swiper.previousIndex]) return
+        let previousSlideId = swiper.slides[swiper.previousIndex].getAttribute('id')
+        let currentSlideId = swiper.slides[swiper.activeIndex].getAttribute('id')
+        if (previousSlideId == currentSlideId) return
+        if (Object.keys(chapters).includes(previousSlideId)) {
+            unsetChapter()
+        }
+        if (!Object.keys(chapters).includes(currentSlideId)) return
+        await setCurrentChapter(currentSlideId)
+
+    });
+
+}
+
+var swiperDesktop = new Swiper(".swiper-desktop", {
+    modules: [plugin],
+    direction: "horizontal",
+    mousewheel: true,
+    pagination: {
+        el: ".swiper-pagination.desktop",
+        clickable: true,
+        dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next.desktop',
+        prevEl: '.swiper-button-prev.desktop',
+    }
+});
+
+var swiperMobile = new Swiper(".swiper-mobile", {
+    modules: [plugin],
+    direction: "horizontal",
+    mousewheel: true,
+    pagination: {
+        el: ".swiper-pagination.mobile",
+        clickable: true,
+        dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next.mobile',
+        prevEl: '.swiper-button-prev.mobile',
+    }
+});
+
+getCurrentSwiper = () => {
+    return (window.innerWidth <= 960) ? swiperMobile : swiperDesktop
+}
+
+getSlideIndex = (slideId) => {
+    let screenMode = (window.innerWidth <= 960) ? 'mobile' : 'desktop'
+    let index
+    document.querySelectorAll(`.swiper-slide.${screenMode}`).forEach((el, idx) => {
+        if (el.getAttribute('id') == slideId) {
+            index = idx
+        }
+    })
+    return index
+}
+
+document
+    .querySelector('#summary-button-desktop')
+    .addEventListener('click', (e) => {
+        e.preventDefault();
+        getCurrentSwiper().slideTo(
+            getSlideIndex('summary-desktop'),
+            0
+        );
+    });
+
+document
+    .querySelector('#summary-button-mobile')
+    .addEventListener('click', (e) => {
+        e.preventDefault();
+        getCurrentSwiper().slideTo(
+            getSlideIndex('summary-mobile'),
+            0
+        );
+    });
+
+
+document
+    .querySelectorAll('a')
+    .forEach(el => {
+        if (el.getAttribute('id') && el.getAttribute('id').includes('summary-button')) {
+            return
+        }
+        el.addEventListener('click', (e) => {
+            e.preventDefault();
+            getCurrentSwiper().slideTo(
+                getSlideIndex(
+                    e.target.getAttribute('id')
+                ),
+                0
+            );
+        });
+    })
 
 
