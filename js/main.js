@@ -11,7 +11,7 @@ loadLegend = (legend) => {
     var layers = legend.filter((value, index) => { return (index % 2) == 0 });
     var colors = legend.filter((value, index) => { return (index % 2) != 0 });
     let legendEl = document.getElementById('legend');
-    legendEl.style.height = `${layers.length * 22}px`
+    legendEl.style.height = `${layers.length * 18}px`
     legendEl.style.display = 'block'
     legendEl.innerHTML = ''
     for (i = 0; i < layers.length; i++) {
