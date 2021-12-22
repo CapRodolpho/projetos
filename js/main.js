@@ -1,39 +1,19 @@
-const initZoom = {
-    center: [-53.99235736195203, -27.426307807866984],
-    zoom: 4.83
-}
-
 const map = new maplibregl.Map({
     container: 'map',
     style: 'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
-    ...initZoom
+    ...INIT_ZOOM
 
 });
 
-let activeChapterName = null;
+var activeSubtitle = null;
 
-function isElementOnScreen(id) {
-    try {
-        const element = document.getElementById(id);
-        const rect = element.getBoundingClientRect();
-        return !(
-            (rect.x + rect.width) < 0
-            || (rect.y + rect.height) < 0
-            || (rect.x > window.innerWidth || rect.y > window.innerHeight)
-        );
-    } catch (error) {
-        return false
-    }
-}
-
-function loadLegend(chapterName) {
-    var layers = chapters[chapterName].legend.filter((value, index) => { return (index % 2) == 0 });
-    var colors = chapters[chapterName].legend.filter((value, index) => { return (index % 2) != 0 });
-
-    const legend = document.getElementById('legend');
-    legend.style.height = `${layers.length * 22}px`
-    legend.style.display = 'block'
-    legend.innerHTML = ''
+loadLegend = (legend) => {
+    var layers = legend.filter((value, index) => { return (index % 2) == 0 });
+    var colors = legend.filter((value, index) => { return (index % 2) != 0 });
+    let legendEl = document.getElementById('legend');
+    legendEl.style.height = `${layers.length * 22}px`
+    legendEl.style.display = 'block'
+    legendEl.innerHTML = ''
     for (i = 0; i < layers.length; i++) {
         var layer = layers[i];
         var color = colors[i];
@@ -47,12 +27,35 @@ function loadLegend(chapterName) {
         value.innerHTML = layer;
         item.appendChild(key);
         item.appendChild(value);
-        legend.appendChild(item);
+        legendEl.appendChild(item);
     }
 }
 
-function loadGeoJSON(chapterName) {
-    return fetch(`data/${chapterName}.json`
+showModalLegend = (legend) => {
+    var layers = legend.filter((value, index) => { return (index % 2) == 0 });
+    var colors = legend.filter((value, index) => { return (index % 2) != 0 });
+    const legendEl = document.getElementById('modal-text');
+    legendEl.style.height = `${layers.length * 22}px`
+    legendEl.innerHTML = ''
+    for (i = 0; i < layers.length; i++) {
+        var layer = layers[i];
+        var color = colors[i];
+        var item = document.createElement('div');
+        var key = document.createElement('span');
+        key.className = 'legend-key';
+        key.style.backgroundColor = color;
+        var value = document.createElement('span');
+        value.className = 'legend-value';
+        value.innerHTML = layer;
+        item.appendChild(key);
+        item.appendChild(value);
+        legendEl.appendChild(item);
+    }
+
+}
+
+loadGeoJSON = (loteName, styles) => {
+    return fetch(`data/${loteName}.json`
         , {
             headers: {
                 'Content-Type': 'application/json',
@@ -64,11 +67,10 @@ function loadGeoJSON(chapterName) {
             return response.json();
         })
         .then(async function (geoJson) {
-            map.addSource(chapterName, {
+            map.addSource(loteName, {
                 "type": "geojson",
                 "data": geoJson
             })
-            var styles = JSON.parse(JSON.stringify(chapters[chapterName].styles))
             for (let style of styles) {
                 map.addLayer(style)
             }
@@ -76,38 +78,49 @@ function loadGeoJSON(chapterName) {
 
 }
 
-async function setCurrentChapter(chapterName) {
-    map.fitBounds(chapters[chapterName].zoom);
-    //document.getElementById(chapterName).classList.add('active');
-    await loadGeoJSON(chapterName)
-    loadLegend(chapterName)
-    activeChapterName = chapterName
+setCurrentChapter = async (currentSlideId) => {
+    let projectSettings = getProjectSettings()
+    let projectName = currentSlideId.split(getSeperatorId())[0]
+    let loteName = currentSlideId.split(getSeperatorId())[1]
+    let loteSettings = projectSettings[projectName].lotes.find(item => item.name == loteName)
+
+    map.fitBounds(loteSettings.zoom);
+    await loadGeoJSON(loteName, loteSettings.styles)
+    activeSubtitle = projectSettings[projectName].legend
+    if (!mobileScreen()) {
+        loadLegend(activeSubtitle)
+    }
+
 }
 
-function unsetChapter() {
-    if (!activeChapterName) return
-    var styles = JSON.parse(JSON.stringify(chapters[activeChapterName].styles))
-    for (let style of styles) {
-        map.removeLayer(style.id)
+unsetChapter = () => {
+    let projectSettings = getProjectSettings()
+    for (let projectName in projectSettings) {
+        for (let lote of projectSettings[projectName].lotes) {
+            for (let style of lote.styles) {
+                try {
+                    map.removeLayer(style.id)
+                } catch (error) {
+
+                }
+            }
+            try {
+                map.removeSource(lote.name)
+            } catch (error) {
+
+            }
+        }
     }
-    map.removeSource(activeChapterName)
-    activeChapterName = ''
     const legend = document.getElementById('legend');
     legend.style.display = 'none'
 }
 
 
-map.on('load', () => {
-    map.flyTo(initZoom)
-    document.getElementById('info').scrollTo(0, 0)
-    /* map.on('mouseup', () => {
-        console.log(map.getZoom())
-    }); */
-})
-
-
-//map.scrollZoom.disable();
-map.addControl(new maplibregl.NavigationControl());
+hasSlideData = (projectName, loteName) => {
+    let projectSettings = getProjectSettings()
+    if (!Object.keys(projectSettings).includes(projectName)) return
+    return projectSettings[projectName].lotes.find(item => item.name == loteName)
+}
 
 function plugin({ swiper, extendParams, on }) {
     extendParams({
@@ -119,97 +132,276 @@ function plugin({ swiper, extendParams, on }) {
         let previousSlideId = swiper.slides[swiper.previousIndex].getAttribute('id')
         let currentSlideId = swiper.slides[swiper.activeIndex].getAttribute('id')
         if (previousSlideId == currentSlideId) return
-        if (Object.keys(chapters).includes(previousSlideId)) {
-            unsetChapter()
+        if (previousSlideId) {
+            let prevProjectName = previousSlideId.split(getSeperatorId())[0]
+            let prevLoteName = previousSlideId.split(getSeperatorId())[1]
+            if (hasSlideData(prevProjectName, prevLoteName)) {
+                unsetChapter()
+            }
         }
-        if (!Object.keys(chapters).includes(currentSlideId)) return
+        let currProjectName = currentSlideId.split(getSeperatorId())[0]
+        let currLoteName = currentSlideId.split(getSeperatorId())[1]
+        if (!hasSlideData(currProjectName, currLoteName)) {
+            document.getElementById("legend-icon").style.display = ''
+            return
+        }
+        if (mobileScreen()) document.getElementById("legend-icon").style.display = 'block'
         await setCurrentChapter(currentSlideId)
 
     });
 
 }
 
-var swiperDesktop = new Swiper(".swiper-desktop", {
+var swiperWidget = new Swiper(".swiper-app", {
     modules: [plugin],
     direction: "horizontal",
-    mousewheel: true,
     pagination: {
-        el: ".swiper-pagination.desktop",
+        el: ".swiper-pagination",
         clickable: true,
         dynamicBullets: true,
     },
     navigation: {
-        nextEl: '.swiper-button-next.desktop',
-        prevEl: '.swiper-button-prev.desktop',
-    }
-});
-
-var swiperMobile = new Swiper(".swiper-mobile", {
-    modules: [plugin],
-    direction: "horizontal",
-    mousewheel: true,
-    pagination: {
-        el: ".swiper-pagination.mobile",
-        clickable: true,
-        dynamicBullets: true,
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
-    navigation: {
-        nextEl: '.swiper-button-next.mobile',
-        prevEl: '.swiper-button-prev.mobile',
-    }
+    freeMode: true
 });
-
-getCurrentSwiper = () => {
-    return (window.innerWidth <= 960) ? swiperMobile : swiperDesktop
-}
 
 getSlideIndex = (slideId) => {
-    let screenMode = (window.innerWidth <= 960) ? 'mobile' : 'desktop'
-    let index
-    document.querySelectorAll(`.swiper-slide.${screenMode}`).forEach((el, idx) => {
+    for (let [idx, el] of swiperWidget.slides.entries()) {
         if (el.getAttribute('id') == slideId) {
-            index = idx
+            return idx
         }
-    })
-    return index
+    }
 }
 
-document
-    .querySelector('#summary-button-desktop')
-    .addEventListener('click', (e) => {
-        e.preventDefault();
-        getCurrentSwiper().slideTo(
-            getSlideIndex('summary-desktop'),
-            0
-        );
-    });
+mobileScreen = () => {
+    return window.screen.width <= 960
+}
 
-document
-    .querySelector('#summary-button-mobile')
-    .addEventListener('click', (e) => {
-        e.preventDefault();
-        getCurrentSwiper().slideTo(
-            getSlideIndex('summary-mobile'),
-            0
-        );
-    });
+connectEvents = () => {
+    map.on('load', () => {
+        map.flyTo(INIT_ZOOM)
+        document.getElementById('info').scrollTo(0, 0)
+        /* map.on('mouseup', () => {
+            console.log(map.getZoom())
+        }); */
+    })
 
+    //map.scrollZoom.disable();
+    map.addControl(new maplibregl.NavigationControl());
 
-document
-    .querySelectorAll('a')
-    .forEach(el => {
-        if (el.getAttribute('id') && el.getAttribute('id').includes('summary-button')) {
-            return
-        }
-        el.addEventListener('click', (e) => {
+    document
+        .querySelector('#summary-button')
+        .addEventListener('click', (e) => {
             e.preventDefault();
-            getCurrentSwiper().slideTo(
-                getSlideIndex(
-                    e.target.getAttribute('id')
-                ),
+            swiperWidget.slideTo(
+                getSlideIndex('summary'),
                 0
             );
         });
+
+    document
+        .querySelectorAll('a')
+        .forEach(el => {
+            if (el.getAttribute('id') && el.getAttribute('id').includes('summary-button')) {
+                return
+            }
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                swiperWidget.slideTo(
+                    getSlideIndex(
+                        e.target.getAttribute('id')
+                    ),
+                    0
+                );
+            });
+        })
+
+    var modal = document.getElementById("legend-modal");
+
+    var btn = document.getElementById("legend-icon");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = () => {
+        showModalLegend(activeSubtitle)
+        modal.style.display = "block";
+    }
+
+    span.onclick = () => {
+        modal.style.display = "none";
+    }
+
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    window.addEventListener('resize', (event) => {
+        if (mobileScreen()) {
+            const legend = document.getElementById('legend');
+            legend.style.display = ''
+            let projectName = swiperWidget.slides[swiperWidget.activeIndex].getAttribute('id').split(getSeperatorId())[0]
+            let loteName = swiperWidget.slides[swiperWidget.activeIndex].getAttribute('id').split(getSeperatorId())[1]
+            if (hasSlideData(projectName, loteName)) {
+                document.getElementById("legend-icon").style.display = 'block'
+            }
+        } else {
+            document.getElementById("legend-icon").style.display = ''
+            modal.style.display = "none"
+            loadLegend(activeSubtitle)
+        }
+    }, true);
+}
+
+getSubtitleSetting = (legend) => {
+    let subtitleSetting = []
+    for (let legendId of legend) {
+        state = SUBTITLE_STATES.find(item => item.id == legendId)
+        if (!state) continue
+        subtitleSetting.push(state.name, state.color)
+    }
+    return subtitleSetting
+}
+
+getCoverSlide = () => {
+    return $("<div/>", {
+        class: "swiper-slide"
+    }).append(
+        $("<div/>", {})
+            .append(
+                $("<div/>", {
+                    style: "text-align: center;"
+                }).append(
+                    $("<img/>", {
+                        class: "logo",
+                        src: "./images/om.png"
+                    })
+                )
+            )
+            .append(
+                $("<h2/>", {
+                    class: "title",
+                    text: "Projetos"
+                })
+            )
+    )
+}
+
+getSeperatorId = () => {
+    return '-0-'
+}
+
+getSummarySlide = () => {
+    let content = $("<div/>", {
+        id: "summary",
+        class: "swiper-slide"
     })
+    let div = $("<div/>", {
+        class: "description"
+    })
+    div.append(
+        $("<h2/>", {
+            class: "title",
+            text: "Sumário"
+        })
+    )
+    let projects = getProjectSettings()
+    for (let projectName in projects) {
+        div.append(
+            $("<ul/>", {})
+                .append(
+                    $("<li/>", {})
+                        .append(
+                            $("<a/>", {
+                                id: `${projectName}${getSeperatorId()}${projects[projectName].lotes[0].name}`,
+                                href: "#",
+                                text: projects[projectName].title
+                            })
+                        )
+                )
+        )
+    }
+    return content.append(div)
+}
 
+geDefaultSlide = (slideId, title, descriptions) => {
+    console.log(title, descriptions)
+    let content = $("<div/>", {
+        id: slideId,
+        class: "swiper-slide"
+    })
+    let div = $("<div/>", {
+        class: "description"
+    })
+    div.append(
+        $("<h2/>", {
+            class: "title",
+            text: title
+        })
+    )
+    for (let description of descriptions) {
+        div.append(
+            $("<span/>", {
+                text: description
+            })
+        )
+        div.append($("<br/>"))
+    }
+    return content.append(div)
+}
 
+loadSlides = () => {
+    $("#slides-content").append(getCoverSlide())
+    $("#slides-content").append(getSummarySlide())
+    let projects = getProjectSettings()
+    for (let projectName in projects) {
+        for (let [idx, lote] of projects[projectName].lotes.entries()) {
+            let descriptions = []
+            if (idx == 0) {
+                descriptions = [projects[projectName].description]
+            }
+            if (lote.description != '') descriptions.push(lote.description)
+            $("#slides-content").append(
+                geDefaultSlide(
+                    `${projectName}${getSeperatorId()}${lote.name}`,
+                    projects[projectName].title,
+                    descriptions
+                )
+            )
+        }
+    }
+}
+
+stopLoader = () => {
+    document.getElementById("loader").style.display = 'none'
+}
+
+setProjectSettings = () => {
+    for (let projectName in PROJECTS) {
+        let project = PROJECTS[projectName]
+        let subtitleSetting = getSubtitleSetting(project.legend)
+        project.legend = subtitleSetting
+        for (let lote of project.lotes) {
+            lote.styles[0].paint['fill-color'] = [
+                'match', ['string', ['get', 'situacao']], ...subtitleSetting, '#AAAAAA'
+            ]
+        }
+    }
+    sessionStorage.setItem('PROJECTS', JSON.stringify(PROJECTS))
+}
+
+getProjectSettings = () => {
+    return JSON.parse(sessionStorage.getItem('PROJECTS'))
+}
+
+main = () => {
+    setProjectSettings()
+    loadSlides()
+    connectEvents()
+    setTimeout(stopLoader, 2000)
+}
+
+main()
