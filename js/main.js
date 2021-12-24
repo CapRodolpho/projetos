@@ -316,10 +316,16 @@ getSummarySlide = () => {
                     $("<li/>", {})
                         .append(
                             $("<a/>", {
-                                id: `${projectName}${getSeperatorId()}${projects[projectName].lotes[0].name}`,
-                                href: "#",
-                                text: projects[projectName].title
+                                
+                                href: "#"
+                                
                             })
+                            .append(
+                                $("<h3/>", {
+                                    id: `${projectName}${getSeperatorId()}${projects[projectName].lotes[0].name}`,
+                                    text: projects[projectName].title
+                                })
+                            )
                         )
                 )
         )
