@@ -144,6 +144,8 @@ body {
     font-size: 1.2rem;
     font-weight: 100;
     line-height: 1.85;
+    text-align: justify;
+  text-justify: inter-word;
 }
 
 
@@ -361,3 +363,5 @@ body {
     animation-name: onOff;
     animation-direction: reverse;
   }
+
+  

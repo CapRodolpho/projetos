@@ -105,7 +105,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'generalizacao-cartografica-50k',
-                description: '- Generalização 1:50.000',
+                description: 'Generalização 1:50.000',
                 zoom: [
                     [-54.60516441090726, -31.59015763447726], // southwestern corner of the bounds
                     [-50.14483553439275, -22.90972914019692] // northeastern corner of the bounds
@@ -148,7 +148,7 @@ var PROJECTS = {
             },
             {
                 name: 'generalizacao-cartografica-100k',
-                description: '- Generalização 1:100.000',
+                description: 'Generalização 1:100.000',
                 zoom: [
                     [-54.60516441090726, -31.59015763447726], // southwestern corner of the bounds
                     [-50.14483553439275, -22.90972914019692] // northeastern corner of the bounds
@@ -278,7 +278,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'mapeamento-interesse-da-forca-25k',
-                description: '- Escala 1:25.000',
+                description: 'Escala 1:25.000',
                 zoom: [
                     [-57.85792524319584, -33.96505531990365], // southwestern corner of the bounds
                     [-50.14207493280416, -22.909789655302163] // northeastern corner of the bounds
@@ -325,7 +325,7 @@ var PROJECTS = {
                     [-54.104642771209704, -31.090174775111926],
                     [-50.395357523790295, -23.909732006690916]
                 ],
-                description: '- Escala 1:50.000',
+                description: 'Escala 1:50.000',
                 styles: [
                     {
                         'id': 'mapeamento-interesse-da-forca-50k-fill',
@@ -364,7 +364,7 @@ var PROJECTS = {
             },
             {
                 name: 'mapeamento-interesse-da-forca-100k',
-                description: '- Escala 1:100.000',
+                description: 'Escala 1:100.000',
                 zoom: [
                     [-54.104642771209704, -31.090174775111926],
                     [-50.395357523790295, -23.909732006690916]
@@ -407,7 +407,7 @@ var PROJECTS = {
             },
             {
                 name: 'mapeamento-interesse-da-forca-250k',
-                description: '- Escala 1:250.000',
+                description: 'Escala 1:250.000',
                 zoom: [
                     [-54.104642487394564, -31.09019171550016],
                     [-52.39535777550543, -23.909716233711624]
@@ -482,7 +482,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'sisfron-ms',
-                description: '- Mato Grosso do Sul',
+                description: 'Mato Grosso do Sul',
                 zoom: [
                     [-58.00961789820789, -21.009031787082876],
                     [-56.990381788192096, -19.990966854945665]
@@ -525,7 +525,7 @@ var PROJECTS = {
             },
             {
                 name: 'sisfron-rr',
-                description: '- Roraima',
+                description: 'Roraima',
                 zoom: [
                     [-63.759010716772494, 3.990958376806931],
                     [-59.990989283227506, 4.509041501813903]
@@ -757,7 +757,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'campo-instrucao-25k',
-                description: '- Escala 1:25.000',
+                description: 'Escala 1:25.000',
                 zoom: [
                     [-55.76038790313186, -30.259015085434463],
                     [-50.11461197696814, -26.115978807393443]
@@ -800,7 +800,7 @@ var PROJECTS = {
             },
             {
                 name: 'campo-instrucao-50k',
-                description: '- Escala 1:50.000',
+                description: 'Escala 1:50.000',
                 zoom: [
                     [-55.76038790313186, -30.259015085434463],
                     [-50.11461197696814, -26.115978807393443]
@@ -852,7 +852,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'santa-catarina-25k',
-                description: '- Escala 1:25.000',
+                description: 'Escala 1:25.000',
                 zoom: [
                     [-52.26021357165334, -28.509022154962935],
                     [-49.98978660234666, -26.24097472235442]
@@ -895,7 +895,7 @@ var PROJECTS = {
             },
             {
                 name: 'santa-catarina-50k',
-                description: '- Escala 1:50.000',
+                description: 'Escala 1:50.000',
                 zoom: [
                     [-52.26021357165334, -28.509022154962935],
                     [-49.98978660234666, -26.24097472235442]

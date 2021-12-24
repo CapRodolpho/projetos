@@ -342,9 +342,9 @@ geDefaultSlide = (slideId, title, descriptions) => {
             text: title
         })
     )
-    for (let description of descriptions) {
+    for (let [idx, description] of descriptions.entries()) {
         div.append(
-            $("<span/>", {
+            $("<h3/>", {
                 text: description
             })
         )
