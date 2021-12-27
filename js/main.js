@@ -333,8 +333,7 @@ getSummarySlide = () => {
     return content.append(div)
 }
 
-geDefaultSlide = (slideId, title, descriptions) => {
-    console.log(title, descriptions)
+geDefaultSlide = (slideId, title, description, subtitle) => {
     let content = $("<div/>", {
         id: slideId,
         class: "swiper-slide"
@@ -348,14 +347,25 @@ geDefaultSlide = (slideId, title, descriptions) => {
             text: title
         })
     )
-    for (let [idx, description] of descriptions.entries()) {
+    if(description){
         div.append(
-            $("<h3/>", {
+            $("<h4/>", {
                 text: description
             })
         )
-        div.append($("<br/>"))
     }
+    if(subtitle){
+        div.append(
+            $("<h3/>", {
+                class: "subtitle" 
+            }).append(
+                $("<b/>", {
+                    text: subtitle
+                })
+            )
+        )
+    }
+    div.append($("<br/>"))
     return content.append(div)
 }
 
@@ -363,18 +373,25 @@ loadSlides = () => {
     $("#slides-content").append(getCoverSlide())
     $("#slides-content").append(getSummarySlide())
     let projects = getProjectSettings()
-    for (let projectName in projects) {
+    for (let projectName in projects) {        
         for (let [idx, lote] of projects[projectName].lotes.entries()) {
-            let descriptions = []
-            if (idx == 0) {
-                descriptions = [projects[projectName].description]
+            if(idx == 0){
+                $("#slides-content").append(
+                    geDefaultSlide(
+                        `${projectName}${getSeperatorId()}${lote.name}`,
+                        projects[projectName].title,
+                        projects[projectName].description,
+                        lote.subtitle
+                    )
+                )
+                continue
             }
-            if (lote.description != '') descriptions.push(lote.description)
             $("#slides-content").append(
                 geDefaultSlide(
                     `${projectName}${getSeperatorId()}${lote.name}`,
                     projects[projectName].title,
-                    descriptions
+                    null,
+                    lote.subtitle
                 )
             )
         }

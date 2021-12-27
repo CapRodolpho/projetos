@@ -105,7 +105,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'generalizacao-cartografica-50k',
-                description: 'Generalização 1:50.000',
+                subtitle: 'Generalização 1:50.000',
                 zoom: [
                     [-54.60516441090726, -31.59015763447726], // southwestern corner of the bounds
                     [-50.14483553439275, -22.90972914019692] // northeastern corner of the bounds
@@ -148,7 +148,7 @@ var PROJECTS = {
             },
             {
                 name: 'generalizacao-cartografica-100k',
-                description: 'Generalização 1:100.000',
+                subtitle: 'Generalização 1:100.000',
                 zoom: [
                     [-54.60516441090726, -31.59015763447726], // southwestern corner of the bounds
                     [-50.14483553439275, -22.90972914019692] // northeastern corner of the bounds
@@ -210,7 +210,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'plano-desenvolvimento',
-                description: '',
+                subtitle: '',
                 zoom: [
                     [-58.999999898, -32.999999850000002], // southwestern corner of the bounds
                     [-52.0000001041, -27.499999969] // northeastern corner of the bounds
@@ -278,7 +278,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'mapeamento-interesse-da-forca-25k',
-                description: 'Escala 1:25.000',
+                subtitle: 'Escala 1:25.000',
                 zoom: [
                     [-57.85792524319584, -33.96505531990365], // southwestern corner of the bounds
                     [-50.14207493280416, -22.909789655302163] // northeastern corner of the bounds
@@ -325,7 +325,7 @@ var PROJECTS = {
                     [-54.104642771209704, -31.090174775111926],
                     [-50.395357523790295, -23.909732006690916]
                 ],
-                description: 'Escala 1:50.000',
+                subtitle: 'Escala 1:50.000',
                 styles: [
                     {
                         'id': 'mapeamento-interesse-da-forca-50k-fill',
@@ -364,7 +364,7 @@ var PROJECTS = {
             },
             {
                 name: 'mapeamento-interesse-da-forca-100k',
-                description: 'Escala 1:100.000',
+                subtitle: 'Escala 1:100.000',
                 zoom: [
                     [-54.104642771209704, -31.090174775111926],
                     [-50.395357523790295, -23.909732006690916]
@@ -407,7 +407,7 @@ var PROJECTS = {
             },
             {
                 name: 'mapeamento-interesse-da-forca-250k',
-                description: 'Escala 1:250.000',
+                subtitle: 'Escala 1:250.000',
                 zoom: [
                     [-54.104642487394564, -31.09019171550016],
                     [-52.39535777550543, -23.909716233711624]
@@ -451,7 +451,7 @@ var PROJECTS = {
         ]
     },
     'sisfron': {
-        title: 'SISFRON',
+        title: 'SISFRON 2021',
         legend: [
             1,
             12,
@@ -482,7 +482,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'sisfron-ms',
-                description: 'Mato Grosso do Sul',
+                subtitle: 'Mato Grosso do Sul',
                 zoom: [
                     [-58.00961789820789, -21.009031787082876],
                     [-56.990381788192096, -19.990966854945665]
@@ -525,7 +525,7 @@ var PROJECTS = {
             },
             {
                 name: 'sisfron-rr',
-                description: 'Roraima',
+                subtitle: 'Roraima',
                 zoom: [
                     [-63.759010716772494, 3.990958376806931],
                     [-59.990989283227506, 4.509041501813903]
@@ -556,52 +556,6 @@ var PROJECTS = {
                         "type": "symbol",
                         "maxzoom": 10,
                         "minzoom": 7.29,
-                        'layout': {
-                            'text-field': ['to-string', ['get', 'identificador']]
-
-                        },
-                        'paint': {
-
-                        }
-                    }
-                ]
-            },
-            {
-                name: 'sisfron-pr',
-                zoom: [
-                    [-54.384866243172475, -24.509027741479414],
-                    [-53.490134107727535, -22.9909701451744]
-                ],
-                description: `Execução de mapeamento topográfico, totalizando 44 cartas topográficas e seus dados
-                vetoriais na
-                escala
-                1:25.000 da região de fronteira do Paraná.`,
-                styles: [
-                    {
-                        'id': 'sisfron-pr-fill',
-                        'source': 'sisfron-pr',
-                        'type': 'fill',
-                        'layout': {},
-                        'paint': {
-                            'fill-opacity': 0.9
-                        }
-                    },
-                    {
-                        'id': 'sisfron-pr-border',
-                        'source': 'sisfron-pr',
-                        'type': 'line',
-                        'layout': {},
-                        'paint': {
-                            'line-color': '#050505',
-                            'line-width': 0.5
-                        }
-                    },
-                    {
-                        'id': 'sisfron-pr-text',
-                        'source': 'sisfron-pr',
-                        "type": "symbol",
-                        "maxzoom": 10,
-                        "minzoom": 8.89,
                         'layout': {
                             'text-field': ['to-string', ['get', 'identificador']]
 
@@ -648,7 +602,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'rio-grande-do-sul',
-                description: '',
+                subtitle: '',
                 zoom: [
                     [-52.51051155017842, -31.384018169281973],
                     [-50.23948867872158, -29.24097876335743]
@@ -704,7 +658,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'uraricoera',
-                description: '',
+                subtitle: '',
                 zoom: [
                     [-61.509012475599526, 1.4909562825715987],
                     [-60.49098722400048, 4.75904295524796]
@@ -747,6 +701,59 @@ var PROJECTS = {
             }
         ]
     },
+    'SISFRON-PR':{
+        title: 'SISFRON-PR',
+        legend: [3],
+        description: `Execução de mapeamento topográfico, totalizando 44 cartas topográficas e seus dados
+        vetoriais na
+        escala
+        1:25.000 da região de fronteira do Paraná.`,
+        lotes: [
+            {
+                name: 'sisfron-pr',
+                zoom: [
+                    [-54.384866243172475, -24.509027741479414],
+                    [-53.490134107727535, -22.9909701451744]
+                ],
+                subtitle: ``,
+                styles: [
+                    {
+                        'id': 'sisfron-pr-fill',
+                        'source': 'sisfron-pr',
+                        'type': 'fill',
+                        'layout': {},
+                        'paint': {
+                            'fill-opacity': 0.9
+                        }
+                    },
+                    {
+                        'id': 'sisfron-pr-border',
+                        'source': 'sisfron-pr',
+                        'type': 'line',
+                        'layout': {},
+                        'paint': {
+                            'line-color': '#050505',
+                            'line-width': 0.5
+                        }
+                    },
+                    {
+                        'id': 'sisfron-pr-text',
+                        'source': 'sisfron-pr',
+                        "type": "symbol",
+                        "maxzoom": 10,
+                        "minzoom": 8.89,
+                        'layout': {
+                            'text-field': ['to-string', ['get', 'identificador']]
+
+                        },
+                        'paint': {
+
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     'campo-instrucao': {
         title: 'Mapeamento de Áreas de Interesse da Força Terrestre - Campos de Instrução',
         legend: [3],
@@ -757,7 +764,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'campo-instrucao-25k',
-                description: 'Escala 1:25.000',
+                subtitle: 'Escala 1:25.000',
                 zoom: [
                     [-55.76038790313186, -30.259015085434463],
                     [-50.11461197696814, -26.115978807393443]
@@ -800,7 +807,7 @@ var PROJECTS = {
             },
             {
                 name: 'campo-instrucao-50k',
-                description: 'Escala 1:50.000',
+                subtitle: 'Escala 1:50.000',
                 zoom: [
                     [-55.76038790313186, -30.259015085434463],
                     [-50.11461197696814, -26.115978807393443]
@@ -852,7 +859,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'santa-catarina-25k',
-                description: 'Escala 1:25.000',
+                subtitle: 'Escala 1:25.000',
                 zoom: [
                     [-52.26021357165334, -28.509022154962935],
                     [-49.98978660234666, -26.24097472235442]
@@ -895,7 +902,7 @@ var PROJECTS = {
             },
             {
                 name: 'santa-catarina-50k',
-                description: 'Escala 1:50.000',
+                subtitle: 'Escala 1:50.000',
                 zoom: [
                     [-52.26021357165334, -28.509022154962935],
                     [-49.98978660234666, -26.24097472235442]
@@ -952,7 +959,7 @@ var PROJECTS = {
         lotes: [
             {
                 name: 'radiografia-am',
-                description: '',
+                subtitle: '',
                 zoom: [
                     [-73.75908278949825, -9.508997036002405],
                     [-53.99091741540177, 5.508999366522698]
