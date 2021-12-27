@@ -180,6 +180,17 @@ mobileScreen = () => {
 }
 
 connectEvents = () => {
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
     map.on('load', () => {
         map.flyTo(INIT_ZOOM)
         document.getElementById('info').scrollTo(0, 0)
@@ -316,16 +327,16 @@ getSummarySlide = () => {
                     $("<li/>", {})
                         .append(
                             $("<a/>", {
-                                
+
                                 href: "#"
-                                
+
                             })
-                            .append(
-                                $("<h3/>", {
-                                    id: `${projectName}${getSeperatorId()}${projects[projectName].lotes[0].name}`,
-                                    text: projects[projectName].title
-                                })
-                            )
+                                .append(
+                                    $("<h3/>", {
+                                        id: `${projectName}${getSeperatorId()}${projects[projectName].lotes[0].name}`,
+                                        text: projects[projectName].title
+                                    })
+                                )
                         )
                 )
         )
@@ -347,17 +358,17 @@ geDefaultSlide = (slideId, title, description, subtitle) => {
             text: title
         })
     )
-    if(description){
+    if (description) {
         div.append(
             $("<h4/>", {
                 text: description
             })
         )
     }
-    if(subtitle){
+    if (subtitle) {
         div.append(
             $("<h3/>", {
-                class: "subtitle" 
+                class: "subtitle"
             }).append(
                 $("<b/>", {
                     text: subtitle
@@ -373,9 +384,9 @@ loadSlides = () => {
     $("#slides-content").append(getCoverSlide())
     $("#slides-content").append(getSummarySlide())
     let projects = getProjectSettings()
-    for (let projectName in projects) {        
+    for (let projectName in projects) {
         for (let [idx, lote] of projects[projectName].lotes.entries()) {
-            if(idx == 0){
+            if (idx == 0) {
                 $("#slides-content").append(
                     geDefaultSlide(
                         `${projectName}${getSeperatorId()}${lote.name}`,
