@@ -55,7 +55,7 @@ showModalLegend = (legend) => {
 }
 
 loadGeoJSON = (loteName, styles) => {
-    return fetch(`data/${loteName}.json`
+    return fetch(`data/${loteName}.geojson`
         , {
             headers: {
                 'Content-Type': 'application/json',
