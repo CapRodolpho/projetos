@@ -288,7 +288,7 @@ getCoverSlide = () => {
                 }).append(
                     $("<img/>", {
                         class: "logo",
-                        src: "./images/om.png"
+                        src: "./images/5CGEO.png"
                     })
                 )
             )
