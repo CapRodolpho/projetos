@@ -1001,5 +1001,55 @@ var PROJECTS = {
                 ]
             }
         ]
+    },
+    'combater-2021': {
+        title: 'Combater 2021',
+        legend: [3],
+        description: `O objetivo do presente projeto foi apoioar a 1ª Divisão de Exército na execução de exercícios de simulação virtual (Op Membeca) e o Comando Militar do Leste em exercício de Força de Apoio a Defesa Civil, elaborando dados geoespaciais vetoriais personalizados para utilização no sistema COMBATER.`,
+        lotes: [
+            {
+                name: 'combater-2021',
+                subtitle: '',
+                zoom: [
+                    [-44.8195, -23.3425],
+                    [-42.2459, -19.2656]
+                ],
+                styles: [
+                    {
+                        'id': 'combater-2021-fill',
+                        'source': 'combater-2021',
+                        'type': 'fill',
+                        'layout': {},
+                        'paint': {
+                            'fill-opacity': 0.9
+                        }
+                    },
+                    {
+                        'id': 'combater-2021-border',
+                        'source': 'combater-2021',
+                        'type': 'line',
+                        'layout': {},
+                        'paint': {
+                            'line-color': '#050505',
+                            'line-width': 0.5
+                        }
+                    },
+                    {
+                        'id': 'combater-2021-text',
+                        'source': 'combater-2021',
+                        "type": "symbol",
+                        "maxzoom": 10,
+                        "minzoom": 7.4,
+                        'layout': {
+                            'text-field': ['to-string', ['get', 'identificador']]
+
+                        },
+                        'paint': {
+
+                        }
+                    }
+                ]
+            }
+        ]
     }
 }
