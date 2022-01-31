@@ -340,7 +340,8 @@ var PROJECTS = {
     },
     'ram-2021': {
         title: 'Projeto Cartografia da Amazônia 2021',
-        legend: [3],
+        legend: [12,
+            3],
         description: `O objetivo do presente projeto é elaborar dados geoespaciais da região da Amazônia Legal a partir de imagens de radares de abertura sintética (SAR), nas bandas X e P, compatíveis com a escala 1:50.000.`,
         lotes: [
             {
