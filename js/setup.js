@@ -438,6 +438,57 @@ var PROJECTS = {
                 ]
             }
         ]
+    },
+    'pddmt-2021': {
+        title: 'Plano de Desenvolvimento da Doutrina Militar Terrestre 2021',
+        legend: [12,
+            3],
+        description: `O objetivo do presente projeto é elaborar dados geoespaciais para suprir a demanda dos Comandos Militares de Área a serem utilizados em preparo, emprego e doutrina da F Ter.`,
+        lotes: [
+            {
+                name: 'pddmt-2021',
+                subtitle: '',
+                zoom: [
+                    [-49.9306, -24.4235],
+                    [-39.4413, -17.7063]
+                ],
+                styles: [
+                    {
+                        'id': 'pddmt-2021-fill',
+                        'source': 'pddmt-2021',
+                        'type': 'fill',
+                        'layout': {},
+                        'paint': {
+                            'fill-opacity': 0.9
+                        }
+                    },
+                    {
+                        'id': 'pddmt-2021-border',
+                        'source': 'pddmt-2021',
+                        'type': 'line',
+                        'layout': {},
+                        'paint': {
+                            'line-color': '#050505',
+                            'line-width': 0.5
+                        }
+                    },
+                    {
+                        'id': 'pddmt-2021-text',
+                        'source': 'pddmt-2021',
+                        "type": "symbol",
+                        "maxzoom": 10,
+                        "minzoom": 7.4,
+                        'layout': {
+                            'text-field': ['to-string', ['get', 'identificador']]
+
+                        },
+                        'paint': {
+
+                        }
+                    }
+                ]
+            }
+        ]
     }
         
 }
