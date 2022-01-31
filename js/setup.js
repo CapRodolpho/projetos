@@ -137,5 +137,56 @@ var PROJECTS = {
                 ]
             }
         ]
+    },      
+    'map-int-ft': {
+        title: 'Mapeamento de Interesse da Força Terrestre 2020',
+        legend: [3],
+        description: `Teste.`,
+        lotes: [
+            {
+                name: 'map-int-ft',
+                subtitle: '',
+                zoom: [
+                    [-44.8195, -23.3425],
+                    [-42.2459, -19.2656]
+                ],
+                styles: [
+                    {
+                        'id': 'map-int-ft-fill',
+                        'source': 'map-int-ft',
+                        'type': 'fill',
+                        'layout': {},
+                        'paint': {
+                            'fill-opacity': 0.9
+                        }
+                    },
+                    {
+                        'id': 'map-int-ft-border',
+                        'source': 'map-int-ft',
+                        'type': 'line',
+                        'layout': {},
+                        'paint': {
+                            'line-color': '#050505',
+                            'line-width': 0.5
+                        }
+                    },
+                    {
+                        'id': 'map-int-ft-text',
+                        'source': 'map-int-ft',
+                        "type": "symbol",
+                        "maxzoom": 10,
+                        "minzoom": 7.4,
+                        'layout': {
+                            'text-field': ['to-string', ['get', 'identificador']]
+
+                        },
+                        'paint': {
+
+                        }
+                    }
+                ]
+            }
+        ]
     }
+        
 }
