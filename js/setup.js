@@ -187,6 +187,56 @@ var PROJECTS = {
                 ]
             }
         ]
+    },
+    'coter-2020': {
+        title: 'COTER 2020',
+        legend: [3],
+        description: `O objetivo do presente projeto foi atender demandas de dados geoespaciais vetoriais solicitos pelo COTER. Tais dados possuem uma estruturação particular, sendo necessário realizar a conversão a partir das normas da EDGV para a estruturação utilizada pelo sistema COMBATER.`,
+        lotes: [
+            {
+                name: 'coter-2020',
+                subtitle: '',
+                zoom: [
+                    [-52.1796, -24.5908],
+                    [-45.2005, -19.5844]
+                ],
+                styles: [
+                    {
+                        'id': 'coter-2020-fill',
+                        'source': 'coter-2020',
+                        'type': 'fill',
+                        'layout': {},
+                        'paint': {
+                            'fill-opacity': 0.9
+                        }
+                    },
+                    {
+                        'id': 'coter-2020-border',
+                        'source': 'coter-2020',
+                        'type': 'line',
+                        'layout': {},
+                        'paint': {
+                            'line-color': '#050505',
+                            'line-width': 0.5
+                        }
+                    },
+                    {
+                        'id': 'coter-2020-text',
+                        'source': 'coter-2020',
+                        "type": "symbol",
+                        "maxzoom": 10,
+                        "minzoom": 7.4,
+                        'layout': {
+                            'text-field': ['to-string', ['get', 'identificador']]
+
+                        },
+                        'paint': {
+
+                        }
+                    }
+                ]
+            }
+        ]
     }
         
 }
