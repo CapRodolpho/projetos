@@ -141,7 +141,7 @@ var PROJECTS = {
     'map-int-ft': {
         title: 'Mapeamento de Interesse da Força Terrestre 2020',
         legend: [3],
-        description: `O objetivo do presente projeto foi elaborar cartas topográficas nas escalas 1:25.000 e 1:50.000 consideradas como áreas de Interesse da Força Terrestre.`,
+        description: `O objetivo do presente projeto foi elaborar cartas topográficas nas escalas 1:25.000 e 1:50.000 nas áreas de Três Corações, São Paulo e Resende, consideradas como áreas de Interesse da Força Terrestre.`,
         lotes: [
             {
                 name: 'map-int-ft',
