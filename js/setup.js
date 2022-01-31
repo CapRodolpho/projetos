@@ -188,6 +188,56 @@ var PROJECTS = {
             }
         ]
     },
+    'map-int-ft-2021': {
+        title: 'Mapeamento de Interesse da Força Terrestre 2021',
+        legend: [3],
+        description: `O objetivo do presente projeto foi elaborar cartas topográficas nas escalas 1:25.000 e 1:50.000 nas áreas de Vitória e Três Corações, consideradas como áreas de Interesse da Força Terrestre.`,
+        lotes: [
+            {
+                name: 'map-int-ft-2021',
+                subtitle: '',
+                zoom: [
+                    [-45.7312, -22.1875],
+                    [-39.6823, -19.8857]
+                ],
+                styles: [
+                    {
+                        'id': 'map-int-ft-2021-fill',
+                        'source': 'map-int-ft-2021',
+                        'type': 'fill',
+                        'layout': {},
+                        'paint': {
+                            'fill-opacity': 0.9
+                        }
+                    },
+                    {
+                        'id': 'map-int-ft-2021-border',
+                        'source': 'map-int-ft-2021',
+                        'type': 'line',
+                        'layout': {},
+                        'paint': {
+                            'line-color': '#050505',
+                            'line-width': 0.5
+                        }
+                    },
+                    {
+                        'id': 'map-int-ft-2021-text',
+                        'source': 'map-int-ft-2021',
+                        "type": "symbol",
+                        "maxzoom": 10,
+                        "minzoom": 7.4,
+                        'layout': {
+                            'text-field': ['to-string', ['get', 'identificador']]
+
+                        },
+                        'paint': {
+
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     'coter-2020': {
         title: 'COTER 2020',
         legend: [3],
