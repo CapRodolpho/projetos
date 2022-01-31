@@ -237,6 +237,56 @@ var PROJECTS = {
                 ]
             }
         ]
+    },
+    'bahia': {
+        title: 'Projeto Bahia',
+        legend: [3],
+        description: `O objetivo do presente projeto foi fornecer ao Estado da Bahia dados geoespaciais com acurácia planialtimétrica que atendam as necessidades de planejamento, fiscalização e execução de diversas atividades, como meio ambiente, agronegócios, monitoramento e abastecimento de água, saneamento, energia elétrica, transporte, segurança pública, defesa civil, administração pública e base territorial. Além disso, teve como objetivo a produção de dados geoespaciais para a cartografia sistemática nacional, missão de responsabilidade da Diretoria de Serviço Geográfico.`,
+        lotes: [
+            {
+                name: 'bahia',
+                subtitle: '',
+                zoom: [
+                    [-44.9808, -16.2345],
+                    [-36.2096, -6.7580]
+                ],
+                styles: [
+                    {
+                        'id': 'bahia-fill',
+                        'source': 'bahia',
+                        'type': 'fill',
+                        'layout': {},
+                        'paint': {
+                            'fill-opacity': 0.9
+                        }
+                    },
+                    {
+                        'id': 'bahia-border',
+                        'source': 'bahia',
+                        'type': 'line',
+                        'layout': {},
+                        'paint': {
+                            'line-color': '#050505',
+                            'line-width': 0.5
+                        }
+                    },
+                    {
+                        'id': 'bahia-text',
+                        'source': 'bahia',
+                        "type": "symbol",
+                        "maxzoom": 10,
+                        "minzoom": 7.4,
+                        'layout': {
+                            'text-field': ['to-string', ['get', 'identificador']]
+
+                        },
+                        'paint': {
+
+                        }
+                    }
+                ]
+            }
+        ]
     }
         
 }
