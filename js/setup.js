@@ -88,6 +88,107 @@ const INIT_ZOOM = {
 }
 
 var PROJECTS = {
+    'copa-10k': {
+        title: 'Copa do Mundo 1:10.000',
+        legend: [3],
+        description: `O objetivo do presente projeto foi elaborar dados geoespaciais na escala 1:10.000 para uso no planejamento e execução das equipes responsáveis pela segurança dos jogos da Copa do Mundo 2014, bem como da Copa das Confederações 2013.`,
+        lotes: [
+            {
+                name: 'copa-10k',
+                subtitle: '',
+                zoom: [
+                    [-43.88633, -23.14725],
+                    [-42.8429, -22.5928]
+                ],
+                styles: [
+                    {
+                        'id': 'copa-10k-fill',
+                        'source': 'copa-10k',
+                        'type': 'fill',
+                        'layout': {},
+                        'paint': {
+                            'fill-opacity': 0.9
+                        }
+                    },
+                    {
+                        'id': 'copa-10k-border',
+                        'source': 'copa-10k',
+                        'type': 'line',
+                        'layout': {},
+                        'paint': {
+                            'line-color': '#050505',
+                            'line-width': 0.5
+                        }
+                    },
+                    {
+                        'id': 'copa-10k-text',
+                        'source': 'copa-10k',
+                        "type": "symbol",
+                        "maxzoom": 10,
+                        "minzoom": 7.4,
+                        'layout': {
+                            'text-field': ['to-string', ['get', 'identificador']]
+
+                        },
+                        'paint': {
+
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    
+    'copa-25k': {
+        title: 'Copa do Mundo 1:25.000',
+        legend: [3],
+        description: `O objetivo do presente projeto foi elaborar dados geoespaciais na escala 1:25.000 para uso no planejamento e execução das equipes responsáveis pela segurança dos jogos da Copa do Mundo 2014, bem como da Copa das Confederações 2013.`,
+        lotes: [
+            {
+                name: 'copa-25k',
+                subtitle: '',
+                zoom: [
+                    [-44.4397, -23.2562],
+                    [-36.2096, -6.7580]
+                ],
+                styles: [
+                    {
+                        'id': 'copa-25k-fill',
+                        'source': 'copa-25k',
+                        'type': 'fill',
+                        'layout': {},
+                        'paint': {
+                            'fill-opacity': 0.9
+                        }
+                    },
+                    {
+                        'id': 'copa-25k-border',
+                        'source': 'copa-25k',
+                        'type': 'line',
+                        'layout': {},
+                        'paint': {
+                            'line-color': '#050505',
+                            'line-width': 0.5
+                        }
+                    },
+                    {
+                        'id': 'copa-25k-text',
+                        'source': 'copa-25k',
+                        "type": "symbol",
+                        "maxzoom": 10,
+                        "minzoom": 7.4,
+                        'layout': {
+                            'text-field': ['to-string', ['get', 'identificador']]
+
+                        },
+                        'paint': {
+
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     'bahia': {
         title: 'Projeto Bahia',
         legend: [3],
