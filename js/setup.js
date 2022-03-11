@@ -391,7 +391,7 @@ var PROJECTS = {
     },
     'map-int-ft-2021': {
         title: 'Mapeamento de Interesse da Força Terrestre 2021',
-        legend: [2,5,6],
+        legend: [3],
         description: `O objetivo do presente projeto foi elaborar cartas topográficas nas escalas 1:25.000 e 1:50.000 nas áreas de Vitória e Três Corações, consideradas como áreas de Interesse da Força Terrestre.`,
         lotes: [
             {
